@@ -4,20 +4,49 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public GameObject weaponPrefab;         // The weapon that the player will pick up
-    public Transform weaponHolder;          // The player's weapon holder (a child object in front of the camera)
-    public KeyCode pickupKey = KeyCode.E;   // The key to press for picking up weapons
-    public float pickupRange = 2f;          // The range within which the player can pick up the weapon
-    private bool isNearWeapon = false;
+    public Transform weaponHolder;          // Player's weapon holder (in front of the camera)
+    public KeyCode pickupKey = KeyCode.E;   // Key to press for picking up a weapon
+    public float pickupRange = 2f;          // Range within which the player can pick up the weapon
+    public KeyCode switchWeapon1Key = KeyCode.Alpha1;  // Key to switch to weapon slot 1
+    public KeyCode switchWeapon2Key = KeyCode.Alpha2;  // Key to switch to weapon slot 2
 
-    private GameObject currentWeapon;       // To store the currently held weapon
+    private GameObject[] weapons = new GameObject[2];  // Store up to 2 weapons
+    private int currentWeaponIndex = 0;    // Currently equipped weapon (0 or 1)
+    private bool isNearWeapon = false;     // Detect if the player is near a weapon
+    private GameObject currentWeapon;      // The weapon currently in hand
 
-    void Update()
+    private void Update()
     {
-        // Detect if the player is near a weapon and presses the pickup key
+        // Handle weapon pickup
         if (isNearWeapon && Input.GetKeyDown(pickupKey))
         {
             PickUpWeapon();
+        }
+
+        // Switch weapons using number keys
+        if (Input.GetKeyDown(switchWeapon1Key))
+        {
+            SwitchWeapon(0);  // Switch to weapon in slot 1
+        }
+        if (Input.GetKeyDown(switchWeapon2Key))
+        {
+            SwitchWeapon(1);  // Switch to weapon in slot 2
+        }
+
+        // Switch weapons using mouse scroll wheel
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollInput != 0f)
+        {
+            if (scrollInput > 0f)
+            {
+                // Scroll up
+                SwitchToNextWeapon();
+            }
+            else if (scrollInput < 0f)
+            {
+                // Scroll down
+                SwitchToPreviousWeapon();
+            }
         }
     }
 
@@ -41,16 +70,68 @@ public class WeaponPickup : MonoBehaviour
 
     void PickUpWeapon()
     {
-        // If the player already has a weapon, destroy the old one
-        if (currentWeapon != null)
+        GameObject newWeapon = Instantiate(gameObject, weaponHolder.position, weaponHolder.rotation, weaponHolder);
+        newWeapon.tag = "Untagged";  // Untag the weapon to avoid picking it up again
+
+        // Store the weapon in the first available slot (up to 2 weapons)
+        if (weapons[0] == null)
         {
-            Destroy(currentWeapon);
+            weapons[0] = newWeapon;
+            SwitchWeapon(0);  // Automatically switch to the first picked weapon
+        }
+        else if (weapons[1] == null)
+        {
+            weapons[1] = newWeapon;
+            SwitchWeapon(1);  // Automatically switch to the second weapon if it's the only available slot
+        }
+        else
+        {
+            // If both weapon slots are full, replace the currently equipped weapon
+            Destroy(weapons[currentWeaponIndex]);
+            weapons[currentWeaponIndex] = newWeapon;
+            SwitchWeapon(currentWeaponIndex);  // Keep the new weapon equipped
         }
 
-        // Instantiate the weapon at the player's weapon holder
-        currentWeapon = Instantiate(weaponPrefab, weaponHolder.position, weaponHolder.rotation, weaponHolder);
-
-        // Optionally disable the weapon on the ground (since it's now picked up)
+        // Destroy the weapon on the ground after picking it up
         Destroy(gameObject);
+    }
+
+    void SwitchWeapon(int weaponIndex)
+    {
+        if (weapons[weaponIndex] == null)
+        {
+            return;  // No weapon in the selected slot
+        }
+
+        // Deactivate the currently equipped weapon
+        if (currentWeapon != null)
+        {
+            currentWeapon.SetActive(false);
+        }
+
+        // Switch to the new weapon
+        currentWeaponIndex = weaponIndex;
+        currentWeapon = weapons[weaponIndex];
+        currentWeapon.SetActive(true);  // Activate the new weapon
+    }
+
+    void SwitchToNextWeapon()
+    {
+        // Cycle forward through weapons
+        int nextWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
+        if (weapons[nextWeaponIndex] != null)
+        {
+            SwitchWeapon(nextWeaponIndex);
+        }
+    }
+
+    void SwitchToPreviousWeapon()
+    {
+        // Cycle backward through weapons
+        int previousWeaponIndex = (currentWeaponIndex - 1 + weapons.Length) % weapons.Length;
+        if (weapons[previousWeaponIndex] != null)
+        {
+            SwitchWeapon(previousWeaponIndex);
+        }
     }
 }
