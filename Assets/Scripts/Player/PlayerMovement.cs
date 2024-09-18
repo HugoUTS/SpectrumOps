@@ -36,16 +36,16 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMouseLook()
     {
-        // Get mouse input
+        // Get mouse input for horizontal (X) and vertical (Y) rotation
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // Rotate the player horizontally (y-axis)
+        // Rotate the player object horizontally (along the Y-axis) based on mouse X input
         transform.Rotate(Vector3.up * mouseX);
 
-        // Rotate the camera vertically (x-axis)
+        // Rotate the camera vertically (along the X-axis) based on mouse Y input
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);  // Prevent camera from flipping
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);  // Prevent the camera from flipping
         cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 
