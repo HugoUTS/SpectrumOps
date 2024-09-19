@@ -1,72 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    public Camera playerCamera;           // Reference to the player's camera
-    public float shootingRange = 100f;    // Maximum range of the weapon
-    public float bulletDamage = 20f;      // Damage dealt by the weapon
-    public GameObject impactEffect;       // Effect to spawn on impact
-    public float fireRate = 0.2f;         // Rate of fire for the weapon
-    private float nextTimeToFire = 0f;    // Time when the player can shoot again
-
-    public string weaponColor;            // Either "Red" or "Blue" depending on the weapon
+    public GameObject bulletPrefab;        // The bullet prefab
+    public Transform bulletSpawnPoint;     // The point where the bullet will be instantiated
+    public float bulletSpeed = 20f;        // The speed of the bullet
+    public float bulletLifetime = 3f;      // Time before the bullet is destroyed
+    public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
 
     void Update()
     {
-        // Shoot when left mouse button is pressed and fire rate allows
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        // Check if the player presses the fire button
+        if (Input.GetKeyDown(shootKey))
         {
-            nextTimeToFire = Time.time + fireRate;
-            AttemptShoot();
+            Shoot();
         }
     }
 
-    void AttemptShoot()
+    void Shoot()
     {
-        // Raycast from the camera to where the player is looking
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, shootingRange))
+        // Instantiate the bullet at the gun's bullet spawn point
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+
+        // Get the Rigidbody component from the bullet and add velocity to it
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.velocity = bulletSpawnPoint.forward * bulletSpeed;
+
+        // Destroy the bullet after some time to prevent it from persisting forever
+        Destroy(bullet, bulletLifetime);
+        
+        void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("Hit: " + hit.transform.name);  // For debugging
-
-            // Check if the object hit is an enemy
-            EnemyHealth enemyHealth = hit.transform.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
-            {
-                string enemyColor = enemyHealth.enemyColor;  // Check the enemy's color
-
-                // Only shoot if the weapon color matches the enemy color
-                if (weaponColor == enemyColor)
-                {
-                    // Correct color, proceed with shooting and dealing damage
-                    Shoot(hit, enemyHealth);
-                }
-                else
-                {
-                    // Provide feedback for targeting the wrong color
-                    Debug.Log("Wrong weapon color! Cannot shoot.");
-                }
-            }
-            else
-            {
-                // If not an enemy, still shoot (for non-enemy targets like walls, etc.)
-                Shoot(hit, null);
-            }
-        }
-    }
-
-    void Shoot(RaycastHit hit, EnemyHealth enemyHealth)
-    {
-        // Deal damage if an enemy was hit
-        if (enemyHealth != null)
-        {
-            enemyHealth.TakeDamage(bulletDamage);
+            // Destroy the bullet on impact
+            Destroy(gameObject);
         }
 
-        // Instantiate impact effect at the point of impact
-        if (impactEffect != null)
-        {
-            Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        }
     }
 }

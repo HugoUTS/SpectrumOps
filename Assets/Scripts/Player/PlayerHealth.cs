@@ -52,8 +52,8 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Disable the player's movement and shooting
-        GetComponent<PlayerMovement>().enabled = false;
-        GetComponent<PlayerShooting>().enabled = false;
+        GetComponent<FirstPersonController>().enabled = false;
+        
 
         // Optionally: Destroy the player or trigger a death animation
         // Destroy(gameObject);

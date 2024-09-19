@@ -48,6 +48,7 @@ public class WeaponPickup : MonoBehaviour
                 SwitchToPreviousWeapon();
             }
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -134,4 +135,6 @@ public class WeaponPickup : MonoBehaviour
             SwitchWeapon(previousWeaponIndex);
         }
     }
+    
+    
 }
