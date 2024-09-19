@@ -18,3 +18,4 @@ MonoBehaviour:
   ammoCount: 10
   range: 75
   WeaponType: 1
+  weaponStyle: 1

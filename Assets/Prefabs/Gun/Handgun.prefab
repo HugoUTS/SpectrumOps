@@ -140,10 +140,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 097d46839f29f0045bc4ab27a81e9821,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2157459279503665235}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 097d46839f29f0045bc4ab27a81e9821,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4579754806166446799}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 097d46839f29f0045bc4ab27a81e9821,
         type: 3}
@@ -162,23 +158,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2797828055604010782}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2157459279503665235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3031635148197798479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e64617b6d356462ea056c616dc7d355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  bulletSpawnPoint: {fileID: 5395646248626101034}
-  bulletSpeed: 20
-  bulletLifetime: 3
-  shootKey: 323
 --- !u!65 &4579754806166446799
 BoxCollider:
   m_ObjectHideFlags: 0
