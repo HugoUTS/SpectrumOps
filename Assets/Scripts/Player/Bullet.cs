@@ -7,8 +7,9 @@ public class Bullet : MonoBehaviour
     public GameObject bulletPrefab;        // The bullet prefab
     public Transform bulletSpawnPoint;     // The point where the bullet will be instantiated
     public float bulletSpeed = 20f;        // The speed of the bullet
-    public float bulletLifetime = 3f;      // Time before the bullet is destroyed
+    public float bulletLifetime = 1f;      // Time before the bullet is destroyed
     public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
+    public Animator gunAnim; // To access the held gun's animation
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class Bullet : MonoBehaviour
         if (Input.GetKeyDown(shootKey))
         {
             Shoot();
+            gunAnim.SetTrigger("Shoot");
         }
     }
 
@@ -30,12 +32,12 @@ public class Bullet : MonoBehaviour
 
         // Destroy the bullet after some time to prevent it from persisting forever
         Destroy(bullet, bulletLifetime);
+
         
         void OnCollisionEnter(Collision collision)
         {
             // Destroy the bullet on impact
             Destroy(gameObject);
         }
-
     }
 }

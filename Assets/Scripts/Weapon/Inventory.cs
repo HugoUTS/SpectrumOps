@@ -6,7 +6,8 @@ using UnityEngine.Rendering.UI;
 
 public class Inventory : MonoBehaviour
 {
-   [SerializeField]private Weapon[] weapons;
+    [SerializeField]private Weapon[] weapons;
+    public GameObject player;
    
    private void Start()
    {
@@ -22,6 +23,7 @@ public class Inventory : MonoBehaviour
          RemoveItem(newItemIndex);
       }
       weapons[newItemIndex] = newItem;
+      Instantiate(weapons[newItemIndex].prefab, player.transform);
    }
 
    public void RemoveItem(int index)
