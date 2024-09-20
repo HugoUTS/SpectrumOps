@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Red Handgun
   description: Red Pistol
-  prefab: {fileID: 3031635148197798479, guid: 52718a6418f22ff4da4dff5241335537, type: 3}
+  prefab: {fileID: 7759906965006469580, guid: 22c130dbe0259f34eb470eb616ae9bae, type: 3}
   ammoCount: 10
   range: 75
   WeaponType: 1
