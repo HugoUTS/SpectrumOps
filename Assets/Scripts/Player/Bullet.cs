@@ -10,13 +10,13 @@ public class Bullet : MonoBehaviour
     public float bulletLifetime = 1f;      // Time before the bullet is destroyed
     public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
     public Animator gunAnim; // To access the held gun's animation
+    public bool canShoot = false;
 
     void Update()
     {
         // Check if the player presses the fire button
         if (Input.GetKeyDown(shootKey))
         {
-            Shoot();
             gunAnim.SetTrigger("Shoot");
         }
     }
