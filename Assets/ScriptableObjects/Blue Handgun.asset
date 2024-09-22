@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a0d2e4c01134071a85911fc34e4274, type: 3}
-  m_Name: BlueHandgun
+  m_Name: Blue Handgun
   m_EditorClassIdentifier: 
   name: BlueHandgun
   description: Blue Pistol
-  prefab: {fileID: 824694440658351529, guid: 22fdb3317160641e7a454bbc4751e498, type: 3}
+  prefab: {fileID: 7759906965006469580, guid: f2c4ccdc52937f345a73dd809b1596e8, type: 3}
   ammoCount: 10
   range: 75
   WeaponType: 1
+  weaponStyle: 0
