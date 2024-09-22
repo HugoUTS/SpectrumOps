@@ -11,6 +11,8 @@ public class PlayerPickup : MonoBehaviour
     private Camera cam;
     private Inventory inventory;
 
+    public GameObject interact;
+
     private void Start()
     {
         GetReferences();
@@ -18,11 +20,20 @@ public class PlayerPickup : MonoBehaviour
 
     private void Update()
     {
+        Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
+        {
+            interact.SetActive(true);
+        }
+        else
+        {
+            interact.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-            RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
             {
                 Debug.Log("Hit: " + hit.transform.name);
