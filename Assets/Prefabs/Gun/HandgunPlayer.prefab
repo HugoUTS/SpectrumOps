@@ -288,10 +288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e64617b6d356462ea056c616dc7d355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7870911917559323166, guid: f9bde712a21e57e4497abb06b6cab2bf,
+  bulletPrefab: {fileID: 7870911917559323166, guid: 93014b29b61e1a748beaa2c7882b649d,
     type: 3}
   bulletSpawnPoint: {fileID: 4308576741579865512}
   bulletSpeed: 40
   bulletLifetime: 1
   shootKey: 323
   gunAnim: {fileID: 389497759968855627}
+  canShoot: 0
