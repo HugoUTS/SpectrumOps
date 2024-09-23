@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4892,6 +4892,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8771313865246022343}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1838429709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838429710}
+  m_Layer: 0
+  m_Name: WeaponHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1838429710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838429709}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00001849234}
+  m_LocalPosition: {x: -47.53192, y: -2.3371828, z: 15.269415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4459864850199571413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840566473
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,6 +6287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons: []
   player: {fileID: 4459864850199571408}
+  weaponHolder: {fileID: 4459864850199571413}
 --- !u!114 &2106909285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8685,6 +8717,7 @@ Transform:
   m_Children:
   - {fileID: 4459864849958685527}
   - {fileID: 1505230073}
+  - {fileID: 1838429710}
   m_Father: {fileID: 4459864850002025808}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &4459864851353399160
@@ -8779,6 +8812,7 @@ GameObject:
   - component: {fileID: 2106909284}
   - component: {fileID: 2106909285}
   - component: {fileID: 4459864851523846478}
+  - component: {fileID: 4459864851523846479}
   m_Layer: 0
   m_Name: FirstPersonController
   m_TagString: Player
@@ -8971,6 +9005,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1605081423}
+--- !u!114 &4459864851523846479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864851523846470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07dbea3e23de547f7a721e652a2cc920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2106909284}
 --- !u!65 &4533977750193734762
 BoxCollider:
   m_ObjectHideFlags: 0

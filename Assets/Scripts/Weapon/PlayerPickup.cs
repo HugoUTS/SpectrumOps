@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,14 +31,14 @@ public class PlayerPickup : MonoBehaviour
             interact.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))  // Press 'E' to pick up the weapon
         {
             if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
             {
                 Debug.Log("Hit: " + hit.transform.name);
                 Weapon newItem = hit.transform.GetComponent<ItemObject>().item as Weapon;
-                inventory.AddItem(newItem);
-                Destroy(hit.transform.gameObject);
+                inventory.AddItem(newItem);  // Add the new weapon to the inventory
+                Destroy(hit.transform.gameObject);  // Remove the weapon from the scene
             }
         }
     }

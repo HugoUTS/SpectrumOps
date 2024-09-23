@@ -9,15 +9,23 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed = 20f;        // The speed of the bullet
     public float bulletLifetime = 1f;      // Time before the bullet is destroyed
     public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
-    public Animator gunAnim; // To access the held gun's animation
+    public Animator gunAnim;               // To access the held gun's animation
     public bool canShoot = false;
+
+    private Inventory inventory;
+
+    void Start()
+    {
+        inventory = GetComponentInParent<Inventory>();
+    }
 
     void Update()
     {
-        // Check if the player presses the fire button
-        if (Input.GetKeyDown(shootKey))
+        // Only allow shooting if the player is holding the currently equipped weapon
+        if (inventory.CanShoot() && Input.GetKeyDown(shootKey))
         {
-            gunAnim.SetTrigger("Shoot");
+            gunAnim.SetTrigger("Shoot"); // Trigger the animation
+            Shoot();
         }
     }
 
@@ -32,12 +40,5 @@ public class Bullet : MonoBehaviour
 
         // Destroy the bullet after some time to prevent it from persisting forever
         Destroy(bullet, bulletLifetime);
-
-        
-        void OnCollisionEnter(Collision collision)
-        {
-            // Destroy the bullet on impact
-            Destroy(gameObject);
-        }
     }
 }
