@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a0d2e4c01134071a85911fc34e4274, type: 3}
+  m_Name: Green Handgun
+  m_EditorClassIdentifier: 
+  name: GreenHandgun
+  description: Green Pistol
+  prefab: {fileID: 7759906965006469580, guid: 92a02907aaedbd14bbeb98b2316f9b9b, type: 3}
+  ammoCount: 10
+  range: 75
+  WeaponType: 1
+  weaponStyle: 1
