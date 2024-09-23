@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: unlockTarget
       value: 
       objectReference: {fileID: 747458765}
+    - target: {fileID: 4671167754149104112, guid: fb21039188f15514388eb7b48149c1e2,
+        type: 3}
+      propertyPath: buttonMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 876001c912e79014f976beeb4c90d977, type: 2}
     - target: {fileID: 7698330611051484560, guid: fb21039188f15514388eb7b48149c1e2,
         type: 3}
       propertyPath: m_Name
@@ -2563,8 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Projectile
-  destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
-    type: 3}
+  wallMaterial: {fileID: 2100000, guid: 876001c912e79014f976beeb4c90d977, type: 2}
 --- !u!65 &795009960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3251,8 +3255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Projectile
-  destroyedWall: {fileID: 6393795132437162747, guid: a42fc7848b6e58e42baa931a6e0bf656,
-    type: 3}
+  wallMaterial: {fileID: 2100000, guid: f3af09c78a929f74f9fdcc05e11f57be, type: 2}
 --- !u!1 &1047145828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,8 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Projectile
-  destroyedWall: {fileID: 6393795132437162747, guid: a29ce2493e7391c4cbe46bd0f62a7ffa,
-    type: 3}
+  wallMaterial: {fileID: 2100000, guid: 5e303160dc0da3f43abc29bb29256bb4, type: 2}
 --- !u!1 &1400834088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,8 +5509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Projectile
-  destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
-    type: 3}
+  wallMaterial: {fileID: 2100000, guid: 876001c912e79014f976beeb4c90d977, type: 2}
 --- !u!1 &1964391968
 GameObject:
   m_ObjectHideFlags: 0
@@ -11207,6 +11208,11 @@ PrefabInstance:
       propertyPath: unlockTarget
       value: 
       objectReference: {fileID: 747458765}
+    - target: {fileID: 4671167754149104112, guid: fb21039188f15514388eb7b48149c1e2,
+        type: 3}
+      propertyPath: buttonMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e303160dc0da3f43abc29bb29256bb4, type: 2}
     - target: {fileID: 7698330611051484560, guid: fb21039188f15514388eb7b48149c1e2,
         type: 3}
       propertyPath: m_Name

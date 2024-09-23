@@ -4,32 +4,42 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    public string tagName = "Projectile";
-    public UnlockTally unlockTarget;
-    public bool activated = false;
-    public Material onColor;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string tagName = "Projectile";     // Tag to identify the bullet
+    public UnlockTally unlockTarget;          // Reference to the UnlockTally object
+    public bool activated = false;            // Track if the button is activated
+    public Material onColor;                  // Material to change to when the button is activated
+    public Material buttonMaterial;           // Material assigned to the button (set this in the Inspector)
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == tagName)
         {
-            if (activated == false)
+            // Get the Renderer component of the projectile (bullet)
+            Renderer bulletRenderer = collision.gameObject.GetComponent<Renderer>();
+
+            if (bulletRenderer != null)
             {
-                unlockTarget.buttonsLeft -= 1;
-                activated = true;
-                gameObject.GetComponent<MeshRenderer>().material = onColor;
+                Material bulletMaterial = bulletRenderer.material;
+
+                // Compare material names to match button and bullet colors
+                if (bulletMaterial.name == buttonMaterial.name + " (Instance)" || bulletMaterial.name == buttonMaterial.name)
+                {
+                    if (!activated)
+                    {
+                        // Reduce the number of buttons left and mark this button as activated
+                        unlockTarget.buttonsLeft -= 1;
+                        activated = true;
+
+                        // Change the button color to the "on" color
+                        gameObject.GetComponent<MeshRenderer>().material = onColor;
+
+                        Debug.Log("Button activated by matching bullet color!");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Button not activated. Bullet color does not match.");
+                }
             }
         }
     }
