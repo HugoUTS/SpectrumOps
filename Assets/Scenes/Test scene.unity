@@ -2572,11 +2572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   tagName: ProjectileRed
   destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
     type: 3}
-
 --- !u!65 &795009960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3262,11 +3260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   tagName: ProjectileGreen
   destroyedWall: {fileID: 6393795132437162747, guid: a42fc7848b6e58e42baa931a6e0bf656,
     type: 3}
-
 --- !u!1 &1047145828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,11 +3989,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   tagName: ProjectileBlue
   destroyedWall: {fileID: 6393795132437162747, guid: a29ce2493e7391c4cbe46bd0f62a7ffa,
     type: 3}
-
 --- !u!1 &1400834088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,11 +5516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   tagName: ProjectileRed
   destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
     type: 3}
-
 --- !u!1 &1964391968
 GameObject:
   m_ObjectHideFlags: 0
