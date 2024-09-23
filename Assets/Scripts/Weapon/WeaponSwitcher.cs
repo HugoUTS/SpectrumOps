@@ -9,16 +9,19 @@ public class WeaponSwitcher : MonoBehaviour
 
     void Update()
     {
-        // Listen for the '1' and '2' key inputs to switch weapons
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            // Directly switch to the weapon at index 0
-            SwitchWeapon(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        // Listen for the 'Q' key input to switch weapons
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             // Directly switch to the weapon at index 1
-            SwitchWeapon(1);
+            if (currentWeaponIndex == 0)
+            {
+                SwitchWeapon(1);
+            }
+            // Directly switch to the weapon at index 0
+            else if (currentWeaponIndex == 1)
+            {
+                SwitchWeapon(0);
+            }       
         }
     }
 
