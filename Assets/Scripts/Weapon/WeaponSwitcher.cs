@@ -6,9 +6,24 @@ public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] private Inventory inventory;  // Reference to the Inventory script
     private int currentWeaponIndex = 0;            // Start with weapon at index 0
+    private int maxWeapons = 2;                    // Assuming you have 2 weapon slots
 
     void Update()
     {
+        // Listen for scroll wheel input to switch weapons
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scrollInput > 0f)  // Scroll up
+        {
+            // Switch to the next weapon
+            SwitchWeapon((currentWeaponIndex + 1) % maxWeapons);
+        }
+        else if (scrollInput < 0f)  // Scroll down
+        {
+            // Switch to the previous weapon
+            SwitchWeapon((currentWeaponIndex - 1 + maxWeapons) % maxWeapons);
+        }
+
         // Listen for the '1' and '2' key inputs to switch weapons
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

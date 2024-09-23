@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: Press "Q" or use the mouse wheel to swap weapons
+  textToDisplay: Press "1" and "2" or the mouse wheel to swap weapons
 --- !u!65 &1880441310
 BoxCollider:
   m_ObjectHideFlags: 0
