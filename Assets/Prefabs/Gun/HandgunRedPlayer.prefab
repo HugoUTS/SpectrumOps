@@ -261,3 +261,4 @@ MonoBehaviour:
   shootKey: 323
   gunAnim: {fileID: 389497759968855627}
   canShoot: 0
+  bulletMaterial: {fileID: 2100000, guid: 876001c912e79014f976beeb4c90d977, type: 2}

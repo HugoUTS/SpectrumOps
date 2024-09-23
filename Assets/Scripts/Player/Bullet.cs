@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
     public Animator gunAnim;               // To access the held gun's animation
     public bool canShoot = false;
+    public Material bulletMaterial;  // The material of the bulle
 
     private Inventory inventory;
 
