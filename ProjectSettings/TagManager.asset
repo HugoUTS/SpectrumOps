@@ -8,6 +8,10 @@ TagManager:
   - Weapon
   - Tutorial
   - Projectile
+  - ProjectileRed
+  - ProjectileYellow
+  - ProjectileGreen
+  - ProjectileBlue
   layers:
   - Default
   - TransparentFX

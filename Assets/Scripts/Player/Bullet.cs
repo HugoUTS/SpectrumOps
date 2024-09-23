@@ -26,7 +26,6 @@ public class Bullet : MonoBehaviour
         if (inventory.CanShoot() && Input.GetKeyDown(shootKey))
         {
             gunAnim.SetTrigger("Shoot"); // Trigger the animation
-            Shoot();
         }
     }
 
