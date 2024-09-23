@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnlockTally : MonoBehaviour
 {
     public int buttonsLeft;
+    public GameObject nextObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,14 @@ public class UnlockTally : MonoBehaviour
         if (buttonsLeft <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (nextObject != null)
+        {
+            nextObject.SetActive(true);
         }
     }
 }
