@@ -33,15 +33,7 @@ public class WeaponSwitcher : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             // Directly switch to the weapon at index 1
-            if (currentWeaponIndex == 0)
-            {
-                SwitchWeapon(1);
-            }
-            // Directly switch to the weapon at index 0
-            else if (currentWeaponIndex == 1)
-            {
-                SwitchWeapon(0);
-            }       
+            SwitchWeapon(1);
         }
     }
 

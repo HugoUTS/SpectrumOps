@@ -17,27 +17,31 @@ public class Inventory : MonoBehaviour
         InitVariables();
     }
 
+    // Method to add a new item to the inventory
     public void AddItem(Weapon newItem)
     {
-        int newItemIndex = (int)newItem.weaponStyle;
-
-        // If there is a weapon in index 0, move it to index 1
-        if (weapons[0] != null)
+        // Check if index 0 is empty
+        if (weapons[0] == null)
         {
-            if (weapons[1] != null)
-            {
-                Debug.LogWarning("Replacing weapon in index 1: " + weapons[1].name);
-            }
-            weapons[1] = weapons[0]; // Move current weapon in index 0 to index 1
-            Debug.Log("Moved weapon from index 0 to index 1: " + weapons[1].name);
+            weapons[0] = newItem;
+            Debug.Log("Added weapon to index 0: " + newItem.name);
+            EquipWeapon(0);  // Equip the weapon in index 0
         }
-
-        // Add the new weapon to index 0 and equip it
-        weapons[0] = newItem;
-        Debug.Log("New weapon added to index 0: " + newItem.name);
-
-        // Equip the newly added weapon in index 0
-        EquipWeapon(0);
+        // Check if index 0 is full but index 1 is empty
+        else if (weapons[1] == null)
+        {
+            weapons[1] = newItem;
+            Debug.Log("Added weapon to index 1: " + newItem.name);
+            EquipWeapon(1);  // Equip the weapon in index 1
+        }
+        // If both index 0 and index 1 are full, replace the currently equipped weapon
+        else
+        {
+            int currentItemIndex = equippedWeaponIndex;  // Get the index of the currently equipped weapon
+            weapons[currentItemIndex] = newItem;
+            Debug.Log("Replaced weapon in index " + currentItemIndex + " with: " + newItem.name);
+            EquipWeapon(currentItemIndex);  // Equip the newly added weapon
+        }
     }
 
     // Equip the weapon in the specified index (0 or 1)
@@ -62,7 +66,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
     public Weapon GetItem(int index)
     {
         return weapons[index];
@@ -83,5 +86,4 @@ public class Inventory : MonoBehaviour
         // Only allow shooting if there is a weapon equipped and it's set active
         return equippedWeaponIndex != -1 && weapons[equippedWeaponIndex] != null;
     }
-
 }

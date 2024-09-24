@@ -9,8 +9,7 @@ public class Weapon : Item
     public int ammoCount;
     public float range;
     public WeaponType WeaponType;
-    public WeaponStyle weaponStyle;
 }
 
 public enum WeaponType { Melee, Pistol, AR, Shotgun, Sniper}
-public enum WeaponStyle { Primary, Secondary}
+
