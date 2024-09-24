@@ -851,7 +851,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: Press the right mouse button to throw your held weapon
+  textToDisplay: When you have two weapons, taking one discards your currently held
+    weapon.
 --- !u!65 &283754519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5374,7 +5375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: Press "1" and "2" or the mouse wheel to swap weapons
+  textToDisplay: Press "1" and "2" or roll the mouse wheel to swap weapons
 --- !u!65 &1880441310
 BoxCollider:
   m_ObjectHideFlags: 0
