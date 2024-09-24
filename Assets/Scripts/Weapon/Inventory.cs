@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,23 +8,38 @@ public class Inventory : MonoBehaviour
     public GameObject player;                      // The player game object
     public Transform weaponHolder;                 // The transform where the weapon will be held
 
+    public WeaponSwitcher weaponSwitcher;          // Public reference to WeaponSwitcher
+
     private int equippedWeaponIndex = 0;           // Track the currently equipped weapon
     private GameObject currentWeaponObject;        // The currently instantiated weapon object in hand
 
     private void Start()
     {
         InitVariables();
+        // You can initialize WeaponSwitcher here if it's not manually assigned
+        if (weaponSwitcher == null)
+        {
+            weaponSwitcher = player.GetComponent<WeaponSwitcher>();
+        }
     }
 
     // Method to add a new item to the inventory
     public void AddItem(Weapon newItem)
     {
+        // Ensure WeaponSwitcher is initialized properly
+        if (weaponSwitcher == null)
+        {
+            Debug.LogError("WeaponSwitcher is not assigned!");
+            return;
+        }
+
         // Check if index 0 is empty
         if (weapons[0] == null)
         {
             weapons[0] = newItem;
             Debug.Log("Added weapon to index 0: " + newItem.name);
             EquipWeapon(0);  // Equip the weapon in index 0
+            weaponSwitcher.UpdateCurrentWeaponIndex(0);  // Update the current weapon index to 0
         }
         // Check if index 0 is full but index 1 is empty
         else if (weapons[1] == null)
@@ -33,6 +47,7 @@ public class Inventory : MonoBehaviour
             weapons[1] = newItem;
             Debug.Log("Added weapon to index 1: " + newItem.name);
             EquipWeapon(1);  // Equip the weapon in index 1
+            weaponSwitcher.UpdateCurrentWeaponIndex(1);  // Update the current weapon index to 1
         }
         // If both index 0 and index 1 are full, replace the currently equipped weapon
         else
@@ -41,6 +56,7 @@ public class Inventory : MonoBehaviour
             weapons[currentItemIndex] = newItem;
             Debug.Log("Replaced weapon in index " + currentItemIndex + " with: " + newItem.name);
             EquipWeapon(currentItemIndex);  // Equip the newly added weapon
+            weaponSwitcher.UpdateCurrentWeaponIndex(currentItemIndex);  // Update the current weapon index
         }
     }
 

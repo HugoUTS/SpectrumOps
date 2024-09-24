@@ -69,4 +69,9 @@ public class WeaponSwitcher : MonoBehaviour
             Debug.Log($"Switched to {newWeapon.name}");
         }
     }
+    
+    public void UpdateCurrentWeaponIndex(int index)
+    {
+        currentWeaponIndex = index;
+    }
 }
