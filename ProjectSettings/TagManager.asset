@@ -12,6 +12,10 @@ TagManager:
   - ProjectileYellow
   - ProjectileGreen
   - ProjectileBlue
+  - Red
+  - Yellow
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX
