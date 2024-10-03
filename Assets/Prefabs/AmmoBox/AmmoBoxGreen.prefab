@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8811797198855501963}
   - component: {fileID: 422772526281431582}
   - component: {fileID: 6730536016311928287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30912342151358224}
   - component: {fileID: -8746536753672528644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AmmoBoxGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 3503145982560861777}
   - component: {fileID: 2762587843140774845}
   - component: {fileID: 8543894097825232927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

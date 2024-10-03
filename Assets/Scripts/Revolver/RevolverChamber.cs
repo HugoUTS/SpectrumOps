@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RevolverChamber : MonoBehaviour
 {
@@ -32,34 +31,25 @@ public class RevolverChamber : MonoBehaviour
             {
                 chambers[currentChamber] = 1;  // Mark the chamber as filled
 
+                Color chamberBulletColor = chamberColor[0];  // Default color
                 switch (selectedAmmo.ammoColor) // Change color of chamber depending on the ammo box's color
                 {
                     case "Red":
-                        {
-                            hudController.UpdateChamberHUD(chambers, chamberColor[1]);
-                        }
+                        chamberBulletColor = chamberColor[1];
                         break;
-
                     case "Yellow":
-                        {
-                            hudController.UpdateChamberHUD(chambers, chamberColor[2]);
-                        }
+                        chamberBulletColor = chamberColor[2];
                         break;
-
                     case "Green":
-                        {
-                            hudController.UpdateChamberHUD(chambers, chamberColor[3]);
-                        }
+                        chamberBulletColor = chamberColor[3];
                         break;
-
                     case "Blue":
-                        {
-                            hudController.UpdateChamberHUD(chambers, chamberColor[4]);
-                        }
+                        chamberBulletColor = chamberColor[4];
                         break;
                 }
+
+                hudController.UpdateSpecificChamberHUD(currentChamber, true, chamberBulletColor);  // Only update the current chamber
                 Debug.Log($"Loaded {selectedAmmo.ammoColor} bullet into chamber {currentChamber}.");
-                
             }
         }
         else
@@ -93,9 +83,10 @@ public class RevolverChamber : MonoBehaviour
                 chambers[currentChamber] = 0;  // Mark the chamber as empty after firing
                 Debug.Log($"Fired bullet from chamber {currentChamber}.");
 
+                hudController.UpdateSpecificChamberHUD(currentChamber, false, chamberColor[0]);  // Update only the fired chamber to empty
+
                 // Rotate to the next chamber after firing
                 RotateChamberRight();
-                hudController.UpdateChamberHUD(chambers, chamberColor[0]);  // Update HUD to reflect chamber status
             }
         }
         else
@@ -106,7 +97,7 @@ public class RevolverChamber : MonoBehaviour
 
     public void RotateChamberLeft()
     {
-        currentChamber = (currentChamber - 1) % totalChambers;
+        currentChamber = (currentChamber - 1 + totalChambers) % totalChambers;
         chamberIcon.transform.Rotate(0, 0, 60);
         Debug.Log($"Revolver rotated to chamber {currentChamber}.");
     }
@@ -119,19 +110,8 @@ public class RevolverChamber : MonoBehaviour
         Debug.Log($"Revolver rotated to chamber {currentChamber}.");
     }
 
-
     void Update()
     {
-        if(currentChamber > 5)
-        {
-            currentChamber = 0;
-        }
-
-        if (currentChamber < 0)
-        {
-            currentChamber = 5;
-        }
-
         // Fire the bullet when the player presses the left mouse button
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -144,6 +124,7 @@ public class RevolverChamber : MonoBehaviour
             LoadBullet();
         }
 
+        // Optional chamber rotation for testing
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             RotateChamberLeft();

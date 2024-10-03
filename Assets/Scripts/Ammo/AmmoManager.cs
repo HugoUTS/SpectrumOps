@@ -45,8 +45,14 @@ public class AmmoManager : MonoBehaviour
             ammoBoxes[currentAmmoIndex] = newAmmoBox;
             Debug.Log($"Replaced ammo box in slot {currentAmmoIndex}.");
         }
+
+        // Ensure HUD is updated after adding the ammo box
         hudController.UpdateAmmoHUD(ammoBoxes, currentAmmoIndex);
+
+        // Now destroy the ammo box in the scene after data is handled
+        Destroy(newAmmoBox.gameObject);
     }
+
 
     // Drop the currently selected ammo box
     public void DropAmmoBox()
