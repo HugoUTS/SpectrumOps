@@ -17,12 +17,11 @@ public class PlayerPickup : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, pickupRange, pickupLayer))
             {
-                AmmoBox ammoBox = hit.collider.GetComponent<AmmoBox>();
-                if (ammoBox != null)
+                AmmoBoxPickup ammoBoxPickup = hit.collider.GetComponent<AmmoBoxPickup>();
+                if (ammoBoxPickup != null)
                 {
-                    // Add the picked-up ammo box to the player's inventory
-                    ammoManager.AddAmmoBox(ammoBox);
-                    Debug.Log($"Picked up {ammoBox.ammoColor} ammo box.");
+                    ammoManager.AddAmmoBox(ammoBoxPickup, ammoBoxPickup.boxColor);
+                    Debug.Log($"Picked up {ammoBoxPickup.boxColor} ammo box.");
                     Destroy(hit.collider.gameObject); // Remove the ammo box from the world after picking up
                 }
             }

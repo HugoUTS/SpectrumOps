@@ -3,19 +3,19 @@ using UnityEngine.UI;
 
 public class AmmoManager : MonoBehaviour
 {
-    public AmmoBox[] ammoBoxes = new AmmoBox[2];  // Array to store two ammo boxes
-    private int currentAmmoIndex = 0;             // Index of the currently selected ammo box
+    public string[] ammoTag; // Array to store ammo box tags
+    private int currentAmmoIndex = 0; // Index of the currently selected ammo box
     public HUDController hudController;
 
     void Start()
     {
-        hudController.UpdateAmmoHUD(ammoBoxes, currentAmmoIndex);
+        hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
     }
 
     // Get the currently selected ammo box
-    public AmmoBox GetCurrentAmmoBox()
+    public string GetCurrentAmmoBox()
     {
-        return ammoBoxes[currentAmmoIndex];
+        return ammoTag[currentAmmoIndex];
     }
 
     // Switch between ammo boxes
@@ -23,45 +23,45 @@ public class AmmoManager : MonoBehaviour
     {
         currentAmmoIndex = (currentAmmoIndex + 1) % 2;
         Debug.Log($"Switched to ammo box at index {currentAmmoIndex}");
-        hudController.UpdateAmmoHUD(ammoBoxes, currentAmmoIndex);
+        hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
     }
 
     // Add a new ammo box to the player's inventory
-    public void AddAmmoBox(AmmoBox newAmmoBox)
+    public void AddAmmoBox(AmmoBoxPickup newAmmoBoxPickup, string newColorTag)
     {
-        if (ammoBoxes[0] == null)
+        if (ammoTag[0] == "")
         {
-            ammoBoxes[0] = newAmmoBox;
+            ammoTag[0] = newColorTag;
             Debug.Log("Added new ammo box to slot 0.");
         }
-        else if (ammoBoxes[1] == null)
+        else if (ammoTag[1] == "")
         {
-            ammoBoxes[1] = newAmmoBox;
+            ammoTag[1] = newColorTag;
             Debug.Log("Added new ammo box to slot 1.");
         }
         else
         {
             // Replace the currently selected ammo box if both slots are full
-            ammoBoxes[currentAmmoIndex] = newAmmoBox;
+            ammoTag[currentAmmoIndex] = newColorTag;
             Debug.Log($"Replaced ammo box in slot {currentAmmoIndex}.");
         }
 
         // Ensure HUD is updated after adding the ammo box
-        hudController.UpdateAmmoHUD(ammoBoxes, currentAmmoIndex);
+        hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
 
         // Now destroy the ammo box in the scene after data is handled
-        Destroy(newAmmoBox.gameObject);
+        Destroy(newAmmoBoxPickup.gameObject);
     }
 
 
     // Drop the currently selected ammo box
     public void DropAmmoBox()
     {
-        if (ammoBoxes[currentAmmoIndex] != null)
+        if (ammoTag[currentAmmoIndex] != null)
         {
-            Debug.Log($"Dropped {ammoBoxes[currentAmmoIndex].ammoColor} ammo box.");
-            ammoBoxes[currentAmmoIndex] = null;
-            hudController.UpdateAmmoHUD(ammoBoxes, currentAmmoIndex);
+            Debug.Log($"Dropped {ammoTag[currentAmmoIndex]} ammo box.");
+            ammoTag[currentAmmoIndex] = "";
+            hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
         }
     }
 }

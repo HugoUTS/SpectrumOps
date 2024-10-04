@@ -8,20 +8,46 @@ public class HUDController : MonoBehaviour
     public Color[] HUDColor; // For storing a list of colors for the revolver chamber and ammo box
 
     // Update the HUD for ammo boxes
-    public void UpdateAmmoHUD(AmmoBox[] ammoBoxes, int selectedAmmoIndex)
+    public void UpdateAmmoHUD(string[] ammoTag, int selectedAmmoIndex)
     {
-        for (int i = 0; i < ammoBoxes.Length; i++)
+        for (int i = 0; i < ammoTag.Length; i++)
         {
-            if (ammoBoxes[i] != null)
+            if (ammoTag[i] != null)
             {
                 ammoHUDSlots[i].SetActive(true); // Display this slot
+
+                switch (ammoTag[i])
+                {
+                    case "Red":
+                        {
+                            ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[1];
+                        }
+                        break;
+
+                    case "Yellow":
+                        {
+                            ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[2];
+                        }
+                        break;
+
+                    case "Green":
+                        {
+                            ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[3];
+                        }
+                        break;
+
+                    case "Blue":
+                        {
+                            ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[4];
+                        }
+                        break;
+                }
             }
+
             else
             {
                 ammoHUDSlots[i].SetActive(false); // Hide this slot if empty
             }
-
-            ammoHUDSlots[i].transform.localScale = (i == selectedAmmoIndex) ? Vector3.one : Vector3.one * 0.8f; // Highlight the selected box
         }
     }
 

@@ -25,14 +25,14 @@ public class RevolverChamber : MonoBehaviour
     {
         if (chambers[currentChamber] == 0)
         {
-            AmmoBox selectedAmmo = ammoManager.GetCurrentAmmoBox();  // Get selected ammo box
+            string selectedAmmoColor = ammoManager.GetCurrentAmmoBox();
             
-            if (selectedAmmo != null)
+            if (selectedAmmoColor != "")
             {
                 chambers[currentChamber] = 1;  // Mark the chamber as filled
 
                 Color chamberBulletColor = chamberColor[0];  // Default color
-                switch (selectedAmmo.ammoColor) // Change color of chamber depending on the ammo box's color
+                switch (selectedAmmoColor) // Change color of chamber depending on the ammo box's color
                 {
                     case "Red":
                         chamberBulletColor = chamberColor[1];
@@ -49,7 +49,7 @@ public class RevolverChamber : MonoBehaviour
                 }
 
                 hudController.UpdateSpecificChamberHUD(currentChamber, true, chamberBulletColor);  // Only update the current chamber
-                Debug.Log($"Loaded {selectedAmmo.ammoColor} bullet into chamber {currentChamber}.");
+                Debug.Log($"Loaded {selectedAmmoColor} bullet into chamber {currentChamber}.");
             }
         }
         else
@@ -67,18 +67,18 @@ public class RevolverChamber : MonoBehaviour
             gunAnim.SetTrigger("Shoot");
 
             // Get the selected ammo box and its bullet prefab
-            AmmoBox selectedAmmo = ammoManager.GetCurrentAmmoBox();
+            string selectedAmmo = ammoManager.GetCurrentAmmoBox();
             if (selectedAmmo != null)
             {
                 // Instantiate the bullet at the bullet spawn point
-                GameObject bullet = Instantiate(selectedAmmo.bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                //GameObject bullet = Instantiate(selectedAmmo.bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
                 // Get the Rigidbody component from the bullet and add velocity to it
-                Rigidbody rb = bullet.GetComponent<Rigidbody>();
-                rb.velocity = bulletSpawnPoint.forward * bulletSpeed;
+                //Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                //rb.velocity = bulletSpawnPoint.forward * bulletSpeed;
 
                 // Destroy the bullet after some time to prevent it from persisting forever
-                Destroy(bullet, bulletLifetime);
+                //Destroy(bullet, bulletLifetime);
 
                 chambers[currentChamber] = 0;  // Mark the chamber as empty after firing
                 Debug.Log($"Fired bullet from chamber {currentChamber}.");
