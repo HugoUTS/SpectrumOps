@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Logic for bullet collision goes here (e.g., damage, impact effects, etc.)
+        //Logic for bullet collision goes here (e.g., damage, impact effects, etc.)
         Destroy(gameObject);  // Destroy the bullet on collision
     }
 }

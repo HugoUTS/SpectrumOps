@@ -5,6 +5,9 @@ public class AmmoManager : MonoBehaviour
 {
     public string[] ammoTag; // Array to store ammo box tags
     private int currentAmmoIndex = 0; // Index of the currently selected ammo box
+
+    public GameObject[] ammoBoxPrefabs;
+    public Transform boxSpawnPoint;
     public HUDController hudController;
 
     void Start()
@@ -21,7 +24,7 @@ public class AmmoManager : MonoBehaviour
     // Switch between ammo boxes
     public void SwitchAmmoBox()
     {
-        currentAmmoIndex = (currentAmmoIndex + 1) % 2;
+        System.Array.Reverse(ammoTag);
         Debug.Log($"Switched to ammo box at index {currentAmmoIndex}");
         hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
     }
@@ -41,6 +44,33 @@ public class AmmoManager : MonoBehaviour
         }
         else
         {
+            switch(ammoTag[0])
+            {
+                case "Red":
+                    {
+                        Instantiate(ammoBoxPrefabs[0], boxSpawnPoint.position, boxSpawnPoint.rotation);
+                    }
+                    break;
+
+                case "Yellow":
+                    {
+                        Instantiate(ammoBoxPrefabs[1], boxSpawnPoint.position, boxSpawnPoint.rotation);
+                    }
+                    break;
+
+                case "Green":
+                    {
+                        Instantiate(ammoBoxPrefabs[2], boxSpawnPoint.position, boxSpawnPoint.rotation);
+                    }
+                    break;
+
+                case "Blue":
+                    {
+                        Instantiate(ammoBoxPrefabs[3], boxSpawnPoint.position, boxSpawnPoint.rotation);
+                    }
+                    break;
+
+            }
             // Replace the currently selected ammo box if both slots are full
             ammoTag[currentAmmoIndex] = newColorTag;
             Debug.Log($"Replaced ammo box in slot {currentAmmoIndex}.");
@@ -62,6 +92,14 @@ public class AmmoManager : MonoBehaviour
             Debug.Log($"Dropped {ammoTag[currentAmmoIndex]} ammo box.");
             ammoTag[currentAmmoIndex] = "";
             hudController.UpdateAmmoHUD(ammoTag, currentAmmoIndex);
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            SwitchAmmoBox();
         }
     }
 }

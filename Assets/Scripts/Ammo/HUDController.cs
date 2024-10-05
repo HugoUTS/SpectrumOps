@@ -41,12 +41,13 @@ public class HUDController : MonoBehaviour
                             ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[4];
                         }
                         break;
-                }
-            }
 
-            else
-            {
-                ammoHUDSlots[i].SetActive(false); // Hide this slot if empty
+                    default:
+                        {
+                            ammoHUDSlots[i].GetComponent<Image>().color = HUDColor[0];
+                        }
+                        break;
+                }
             }
         }
     }
