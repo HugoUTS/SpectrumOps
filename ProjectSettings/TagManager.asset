@@ -12,11 +12,16 @@ TagManager:
   - ProjectileYellow
   - ProjectileGreen
   - ProjectileBlue
+  - Red
+  - Yellow
+  - Green
+  - Blue
+  - Pickup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Weapon

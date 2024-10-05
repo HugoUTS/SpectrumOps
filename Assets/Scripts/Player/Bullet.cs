@@ -1,44 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject bulletPrefab;        // The bullet prefab
-    public Transform bulletSpawnPoint;     // The point where the bullet will be instantiated
-    public float bulletSpeed = 20f;        // The speed of the bullet
-    public float bulletLifetime = 1f;      // Time before the bullet is destroyed
-    public KeyCode shootKey = KeyCode.Mouse0; // Key to fire the gun (left mouse button)
-    public Animator gunAnim;               // To access the held gun's animation
-    public bool canShoot = false;
-    public Material bulletMaterial;  // The material of the bulle
-
-    private Inventory inventory;
+    public float bulletSpeed = 20f;       // The speed of the bullet
+    public float bulletLifetime = 1f;     // Time before the bullet is destroyed
+    public Material bulletMaterial;       // The material of the bullet for color indication
 
     void Start()
     {
-        inventory = GetComponentInParent<Inventory>();
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = transform.forward * bulletSpeed; // Set the velocity
+        Destroy(gameObject, bulletLifetime);           // Destroy bullet after lifetime expires
     }
 
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        // Only allow shooting if the player is holding the currently equipped weapon
-        if (inventory.CanShoot() && Input.GetKeyDown(shootKey))
-        {
-            gunAnim.SetTrigger("Shoot"); // Trigger the animation
-        }
-    }
-
-    void Shoot()
-    {
-        // Instantiate the bullet at the gun's bullet spawn point
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-
-        // Get the Rigidbody component from the bullet and add velocity to it
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.velocity = bulletSpawnPoint.forward * bulletSpeed;
-
-        // Destroy the bullet after some time to prevent it from persisting forever
-        Destroy(bullet, bulletLifetime);
+        //Logic for bullet collision goes here (e.g., damage, impact effects, etc.)
+        Destroy(gameObject);  // Destroy the bullet on collision
     }
 }

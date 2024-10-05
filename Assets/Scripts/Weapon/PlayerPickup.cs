@@ -4,48 +4,27 @@ using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
-    [SerializeField] private float pickupRange;
-    [SerializeField] private LayerMask pickupLayer;
+    public float pickupRange = 2f; // How close the player must be to pick up the item
+    public LayerMask pickupLayer; // The layer of objects that can be picked up (e.g., ammo boxes)
+    public Transform playerCamera; // The player's camera for raycasting
+    public AmmoManager ammoManager; // Reference to the AmmoManager for adding ammo boxes
 
-    private Camera cam;
-    private Inventory inventory;
-
-    public GameObject interact;
-
-    private void Start()
+    void Update()
     {
-        GetReferences();
-    }
-
-    private void Update()
-    {
-        Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
+        // Use raycasting to detect items the player is aiming at within pickup range
+        if (Input.GetKeyDown(KeyCode.E)) // Press 'E' to interact
         {
-            interact.SetActive(true);
-        }
-        else
-        {
-            interact.SetActive(false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))  // Press 'E' to pick up the weapon
-        {
-            if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
+            RaycastHit hit;
+            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, pickupRange, pickupLayer))
             {
-                Debug.Log("Hit: " + hit.transform.name);
-                Weapon newItem = hit.transform.GetComponent<ItemObject>().item as Weapon;
-                inventory.AddItem(newItem);  // Add the new weapon to the inventory
-                Destroy(hit.transform.gameObject);  // Remove the weapon from the scene
+                AmmoBoxPickup ammoBoxPickup = hit.collider.GetComponent<AmmoBoxPickup>();
+                if (ammoBoxPickup != null)
+                {
+                    ammoManager.AddAmmoBox(ammoBoxPickup, ammoBoxPickup.boxColor);
+                    Debug.Log($"Picked up {ammoBoxPickup.boxColor} ammo box.");
+                    Destroy(hit.collider.gameObject); // Remove the ammo box from the world after picking up
+                }
             }
         }
-    }
-
-    private void GetReferences()
-    {
-        cam = GetComponentInChildren<Camera>();
-        inventory = GetComponent<Inventory>();
     }
 }
