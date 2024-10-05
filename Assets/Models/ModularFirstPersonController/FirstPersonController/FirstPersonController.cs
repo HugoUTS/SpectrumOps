@@ -99,7 +99,7 @@ public class FirstPersonController : MonoBehaviour
     public float jumpPower = 5f;
 
     // Internal Variables
-    public bool isGrounded = false;
+    private bool isGrounded = false;
 
     #endregion
 
@@ -130,7 +130,6 @@ public class FirstPersonController : MonoBehaviour
     private float timer = 0;
 
     #endregion
-    
 
     private void Awake()
     {
@@ -324,8 +323,6 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
 
-        
-        
         #region Jump
 
         // Gets input and calls jump method
@@ -499,8 +496,6 @@ public class FirstPersonController : MonoBehaviour
             isCrouched = true;
         }
     }
-    
-    
 
     private void HeadBob()
     {
