@@ -153,17 +153,22 @@ public class RevolverChamber : MonoBehaviour
             {
                 RotateChamberRight();
             }
-            LoadBullet();
+            if (chambers[currentChamber] == 0)
+            {
+                gunAnim.SetTrigger("Reload");
+            }
         }
 
         // Optional chamber rotation for testing
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
+            gunAnim.SetTrigger("RotL");
             RotateChamberLeft();
         }
 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f )
         {
+            gunAnim.SetTrigger("RotR");
             RotateChamberRight();
         }
 
