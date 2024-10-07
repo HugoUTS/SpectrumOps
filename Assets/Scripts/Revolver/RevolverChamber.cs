@@ -5,7 +5,7 @@ public class RevolverChamber : MonoBehaviour
 {
     public RectTransform chamberIcon; // Reference to gun chamber
     public int totalChambers = 6;    // Number of chambers in the revolver
-    [SerializeField] private int[] chambers;  // Store the bullet info for each chamber
+    [SerializeField] public int[] chambers;  // Store the bullet info for each chamber
     public int currentChamber = 0;   // The currently active chamber
     public Color[] chamberColor; // Stored colors for bullet chamber
     public string[] chamberTag;
