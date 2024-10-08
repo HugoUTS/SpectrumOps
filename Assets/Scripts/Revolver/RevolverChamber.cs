@@ -15,6 +15,7 @@ public class RevolverChamber : MonoBehaviour
     public AmmoManager ammoManager;    // Reference to the player's ammo manager
     public HUDController hudController;  // Reference to the HUD Controller for UI updates
     public Animator gunAnim;  // To trigger shooting animation
+    public AudioSource reloadAudio;  // AudioSource for the reload sound effect
     public float bulletSpeed = 20f;  // Speed of the fired bullet
     public float bulletLifetime = 3f; // Lifetime of the fired bullet
 
@@ -156,6 +157,14 @@ public class RevolverChamber : MonoBehaviour
             if (chambers[currentChamber] == 0)
             {
                 gunAnim.SetTrigger("Reload");
+            }
+            if (reloadAudio != null)
+            {
+                reloadAudio.Play();
+            }
+            else
+            {
+                Debug.LogWarning("Reload sound is missing!");
             }
         }
 
