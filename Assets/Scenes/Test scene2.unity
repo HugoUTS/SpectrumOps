@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3524,9 +3524,9 @@ RectTransform:
   - {fileID: 1533404215}
   m_Father: {fileID: 2030169233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 872, y: -573}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -408, y: 227}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667925373
@@ -9731,22 +9731,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074212935}
   m_CullTransparentMesh: 1
---- !u!114 &2106909284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459864851523846470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d3a625920364911a3e904e785259d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons: []
-  player: {fileID: 4459864850199571408}
-  weaponHolder: {fileID: 4459864850199571413}
-  weaponSwitcher: {fileID: 4459864851523846479}
 --- !u!114 &2106909285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12351,12 +12335,11 @@ GameObject:
   - component: {fileID: 4459864851523846473}
   - component: {fileID: 4459864851523846477}
   - component: {fileID: 4459864851523846476}
-  - component: {fileID: 2106909284}
   - component: {fileID: 2106909285}
   - component: {fileID: 4459864851523846478}
-  - component: {fileID: 4459864851523846479}
   - component: {fileID: 4459864851523846481}
   - component: {fileID: 4459864851523846480}
+  - component: {fileID: 4459864851523846482}
   m_Layer: 3
   m_Name: FirstPersonController
   m_TagString: Player
@@ -12552,19 +12535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1605081423}
---- !u!114 &4459864851523846479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459864851523846470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07dbea3e23de547f7a721e652a2cc920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 2106909284}
 --- !u!82 &4459864851523846480
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12676,6 +12646,24 @@ MonoBehaviour:
   footstepSource: {fileID: 0}
   footstepClip: {fileID: 8300000, guid: e97daefb45f1b406d8e0dfe634b45163, type: 3}
   footstepInterval: 0.5
+--- !u!114 &4459864851523846482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864851523846470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c3946e94a00a4fab529ac8887189b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCamera: {fileID: 5735093517483259861, guid: 716027ccc67a65d469af1e6b84bfff78,
+    type: 3}
+  deathUI: {fileID: 1309303232922027573, guid: 439d50420d3014d40baf2780868b7fdf, type: 3}
+  camera: {fileID: 4459864850199571408}
+  objects:
+  - {fileID: 2030169229}
 --- !u!65 &4533977750193734762
 BoxCollider:
   m_ObjectHideFlags: 0
