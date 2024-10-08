@@ -9,6 +9,8 @@ public class EndLevel : MonoBehaviour
     public GameObject playerController;
     public float lerpTime = 0;
     public Animator elevatorAnim;
+    public RevolverChamber revolver;
+    public GameObject gunHUD;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class EndLevel : MonoBehaviour
         if (startEndLevel == true)
         {
             playerCamera.transform.parent = null;
+            revolver.enabled = false;
+            gunHUD.SetActive(false);
             Destroy(playerController);
             lerpTime += Time.deltaTime * 0.1f;
             playerCamera.transform.position = Vector3.Lerp(playerCamera.transform.position, transform.position, lerpTime);
