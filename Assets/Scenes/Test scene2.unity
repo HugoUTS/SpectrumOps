@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -804,6 +804,8 @@ MonoBehaviour:
   tagName: ProjectileRed
   destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
     type: 3}
+  destructionClip: {fileID: 0}
+  soundVolume: 1
 --- !u!64 &123454428
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2773,6 +2775,8 @@ MonoBehaviour:
   tagName: ProjectileBlue
   destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
     type: 3}
+  destructionClip: {fileID: 0}
+  soundVolume: 1
 --- !u!1 &513982746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,6 +4214,8 @@ MonoBehaviour:
   tagName: ProjectileRed
   destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
     type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
 --- !u!65 &795009960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4904,6 +4910,8 @@ MonoBehaviour:
   tagName: ProjectileGreen
   destroyedWall: {fileID: 6393795132437162747, guid: a42fc7848b6e58e42baa931a6e0bf656,
     type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
 --- !u!1 &979537632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,6 +6288,8 @@ MonoBehaviour:
   tagName: ProjectileBlue
   destroyedWall: {fileID: 6393795132437162747, guid: a29ce2493e7391c4cbe46bd0f62a7ffa,
     type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
 --- !u!1 &1400834088
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,6 +8583,8 @@ MonoBehaviour:
   tagName: ProjectileGreen
   destroyedWall: {fileID: 2460640142907343942, guid: 42d7aaf4b160740498bcf3ec0341c0c8,
     type: 3}
+  destructionClip: {fileID: 0}
+  soundVolume: 1
 --- !u!64 &1934663280
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8848,6 +8860,8 @@ MonoBehaviour:
   tagName: ProjectileRed
   destroyedWall: {fileID: 6393795132437162747, guid: 201e0a38e092f454895778c0a3a36d93,
     type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
 --- !u!1 &1964391968
 GameObject:
   m_ObjectHideFlags: 0
