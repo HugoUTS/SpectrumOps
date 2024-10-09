@@ -169,9 +169,9 @@ GameObject:
   - component: {fileID: 8782687436540951120}
   - component: {fileID: 6644490644829929666}
   - component: {fileID: 9046133386022910521}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PlayerDeath
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

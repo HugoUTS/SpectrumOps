@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -50,6 +51,15 @@ public class PauseMenu : MonoBehaviour
 
                 pauseUI.SetActive(false);
                 isPaused = false;
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            if(isPaused == true)
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
