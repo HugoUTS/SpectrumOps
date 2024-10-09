@@ -455,6 +455,7 @@ MonoBehaviour:
   ammoManager: {fileID: 0}
   hudController: {fileID: 0}
   gunAnim: {fileID: 389497759968855627}
+  reloadAudio: {fileID: 0}
   bulletSpeed: 20
   bulletLifetime: 1
   gunMeshes:
