@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4241,6 +4241,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047145828}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1066237069 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3510174286101040840, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+    type: 3}
+  m_PrefabInstance: {fileID: 8875990517788742613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1079186300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 975389533775745096, guid: fb21039188f15514388eb7b48149c1e2,
@@ -11689,6 +11695,11 @@ PrefabInstance:
       propertyPath: hudController
       value: 
       objectReference: {fileID: 2030169234}
+    - target: {fileID: 3510174286101040840, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 25684f6ec410b4ea68edcf4df23de65d, type: 3}
     - target: {fileID: 3974024359843907947, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: objects.Array.data[0]
@@ -11749,11 +11760,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6237499280436597880, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: emptyChamberClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9db4322c86b914af0a91ae9ca6228dd0, type: 3}
     - target: {fileID: 6317373166510705776, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: chamberIcon
       value: 
       objectReference: {fileID: 232065408}
+    - target: {fileID: 6317373166510705776, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: reloadAudio
+      value: 
+      objectReference: {fileID: 1066237069}
     - target: {fileID: 6317373166510705776, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: hudController
