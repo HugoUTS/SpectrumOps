@@ -21,7 +21,16 @@ public class HostageCountDown : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            elevator.hostagesLeft -= 1;
+            elevator.hostagesRescued += 1;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            elevator.hostagesRescued += 1;
+            Destroy(gameObject);
         }
     }
 }

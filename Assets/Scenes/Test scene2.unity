@@ -5541,6 +5541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78539605a2904fc479a48c802473c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPoint: {fileID: 0}
   playerCamera: {fileID: 4459864850199571408}
   playerController: {fileID: 4459864851523846470}
   lerpTime: 0
@@ -11772,6 +11773,16 @@ PrefabInstance:
     - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: HUDController
+      value: 
+      objectReference: {fileID: 2030169229}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.data[0]
       value: 
       objectReference: {fileID: 2030169229}
     m_RemovedComponents: []
