@@ -792,7 +792,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69
+      value: -69.18663
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
         type: 3}
@@ -11031,7 +11031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78539605a2904fc479a48c802473c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 1315608075}
+  endPoint: {fileID: 0}
   playerCamera: {fileID: 4459864850199571408}
   playerController: {fileID: 4459864851523846470}
   lerpTime: 0
