@@ -17,7 +17,9 @@ public class DestroyWall : MonoBehaviour
             AudioSource.PlayClipAtPoint(destructionClip, transform.position, soundVolume);
 
             // Instantiate the broken wall prefab immediately
-            Instantiate(destroyedWall, transform.position, transform.rotation);
+            GameObject brokenWall = Instantiate(destroyedWall, transform.position, transform.rotation);
+
+            brokenWall.transform.localScale = new Vector3(transform.localScale.x, gameObject.transform.localScale.y * 0.2f, gameObject.transform.localScale.z * 0.2f);
 
             // Destroy the original wall object immediately
             Destroy(gameObject);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndLevel : MonoBehaviour
 {
     private bool startEndLevel = false;
+    public GameObject endPoint;
     public GameObject playerCamera;
     public GameObject playerController;
     public float lerpTime = 0;
@@ -27,8 +28,8 @@ public class EndLevel : MonoBehaviour
             gunHUD.SetActive(false);
             Destroy(playerController);
             lerpTime += Time.deltaTime * 0.1f;
-            playerCamera.transform.position = Vector3.Lerp(playerCamera.transform.position, transform.position, lerpTime);
-            playerCamera.transform.rotation = Quaternion.Lerp(playerCamera.transform.rotation, Quaternion.Euler(0, 0, 0), lerpTime);
+            playerCamera.transform.position = Vector3.Lerp(playerCamera.transform.position, endPoint.transform.position, lerpTime);
+            playerCamera.transform.rotation = Quaternion.Lerp(playerCamera.transform.rotation, endPoint.transform.rotation, lerpTime);
         }
 
         if (lerpTime >= 0.1)
