@@ -21,12 +21,12 @@ public class EnemyAttack : MonoBehaviour
             if (distance <= attackRange && Time.time >= nextAttackTime)
             {
                 // Attack the player
-                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damage);
-                    nextAttackTime = Time.time + attackCooldown;
-                }
+                //PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+                //if (playerHealth != null)
+                //{
+                    //playerHealth.TakeDamage(damage);
+                    //nextAttackTime = Time.time + attackCooldown;
+                //}
             }
         }
     }

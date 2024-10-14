@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GameOver : MonoBehaviour
+public class PlayerHealthManager : MonoBehaviour
 {
+    public float playerHealth;
+    public int playerMaxHealth = 100;
+
+    public Image healthBar;
+
     public GameObject deathCamera;
     public GameObject deathUI;
     public GameObject camera;
@@ -12,13 +18,14 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerHealth = playerMaxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
+        healthBar.fillAmount = playerHealth / playerMaxHealth;
+        if(playerHealth <= 0)
         {
             // create the new object
             var newObject = Instantiate(deathCamera, gameObject.transform.position, camera.transform.rotation);
