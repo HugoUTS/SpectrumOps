@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4323,6 +4323,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 127538028}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1138657955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3002946767364286351, guid: 872b6f9e4e05e0d498a3ce1998c14051,
+    type: 3}
+  m_PrefabInstance: {fileID: 5038179575257091116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198060862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,6 +5633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78539605a2904fc479a48c802473c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPoint: {fileID: 0}
   playerCamera: {fileID: 4459864850199571408}
   playerController: {fileID: 4459864851523846470}
   lerpTime: 0
@@ -11790,6 +11797,11 @@ PrefabInstance:
       propertyPath: hudController
       value: 
       objectReference: {fileID: 2030169234}
+    - target: {fileID: 3115167846784317895, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: interactBox
+      value: 
+      objectReference: {fileID: 1138657955}
     - target: {fileID: 3510174286101040840, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: m_audioClip
@@ -11888,6 +11900,16 @@ PrefabInstance:
     - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: HUDController
+      value: 
+      objectReference: {fileID: 2030169229}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.data[0]
       value: 
       objectReference: {fileID: 2030169229}
     m_RemovedComponents: []
