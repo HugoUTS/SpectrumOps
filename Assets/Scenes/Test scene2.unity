@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4727,13 +4727,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315608075}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 1.9996033}
+  m_LocalRotation: {x: -0, y: -0.7071065, z: -0, w: 0.7071071}
+  m_LocalPosition: {x: 1.5003176, y: 0, z: 1.9993651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3952958849945254232}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1316232593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,7 +5927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78539605a2904fc479a48c802473c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 1315608075}
   playerCamera: {fileID: 4459864850199571408}
   playerController: {fileID: 4459864851523846470}
   lerpTime: 0
@@ -9045,6 +9045,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617763231934662954, guid: 0b230b854db12574e8b729cf1a24fca8,
+        type: 3}
+      propertyPath: m_text
+      value: '[Esc] Resume
+
+        [R] Restart
+
+        [Backspace] Title Screen'
       objectReference: {fileID: 0}
     - target: {fileID: 6916658089876806481, guid: 0b230b854db12574e8b729cf1a24fca8,
         type: 3}
@@ -12230,6 +12239,16 @@ PrefabInstance:
     - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: HUDController
+      value: 
+      objectReference: {fileID: 2030169229}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: HUDControllers.Array.data[0]
       value: 
       objectReference: {fileID: 2030169229}
     m_RemovedComponents: []

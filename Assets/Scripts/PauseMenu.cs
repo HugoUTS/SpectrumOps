@@ -74,5 +74,14 @@ public class PauseMenu : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            if (isPaused == true)
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 }
