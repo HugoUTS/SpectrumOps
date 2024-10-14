@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     public PlayerPickup playerPickup;
     public AmmoManager ammoManager;
     public RevolverChamber revolverChamber;
-    public GameObject HUDController;
+    public GameObject[] HUDControllers;
 
     public GameObject pauseUI;
 
@@ -34,7 +34,13 @@ public class PauseMenu : MonoBehaviour
                 playerPickup.enabled = false;
                 ammoManager.enabled = false;
                 revolverChamber.enabled = false;
-                HUDController.SetActive(false);
+                for (int i = 0; i < HUDControllers.Length; i++)
+                {
+                    if(HUDControllers[i] != null)
+                    {
+                        HUDControllers[i].SetActive(false);
+                    }
+                }
 
                 pauseUI.SetActive(true);
                 isPaused = true;
@@ -47,7 +53,13 @@ public class PauseMenu : MonoBehaviour
                 playerPickup.enabled = true;
                 ammoManager.enabled = true;
                 revolverChamber.enabled = true;
-                HUDController.SetActive(true);
+                for (int i = 0; i < HUDControllers.Length; i++)
+                {
+                    if (HUDControllers[i] != null)
+                    {
+                        HUDControllers[i].SetActive(true);
+                    }
+                }
 
                 pauseUI.SetActive(false);
                 isPaused = false;
