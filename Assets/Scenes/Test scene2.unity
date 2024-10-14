@@ -5849,6 +5849,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8771313865246022343}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1824243574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3002946767364286351, guid: 872b6f9e4e05e0d498a3ce1998c14051,
+    type: 3}
+  m_PrefabInstance: {fileID: 5038179575257091116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840566473
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,6 +11696,11 @@ PrefabInstance:
       propertyPath: hudController
       value: 
       objectReference: {fileID: 2030169234}
+    - target: {fileID: 3115167846784317895, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: interactBox
+      value: 
+      objectReference: {fileID: 1824243574}
     - target: {fileID: 3974024359843907947, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: objects.Array.data[0]

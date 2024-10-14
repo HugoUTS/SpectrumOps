@@ -135,9 +135,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &-3488928054135240939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171,6 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e64617b6d356462ea056c616dc7d355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 20
+  bulletSpeed: 40
   bulletLifetime: 2
   bulletMaterial: {fileID: 2100000, guid: 876001c912e79014f976beeb4c90d977, type: 2}
