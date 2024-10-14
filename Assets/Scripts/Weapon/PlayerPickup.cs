@@ -10,6 +10,10 @@ public class PlayerPickup : MonoBehaviour
     public Transform playerCamera; // The player's camera for raycasting
     public AmmoManager ammoManager; // Reference to the AmmoManager for adding ammo boxes
 
+    // Sound Variables
+    public AudioSource audioSource;        // AudioSource for playing sound
+    public AudioClip ammoPickupClip;       // Sound to play when ammo box is picked up
+
     void Update()
     {
         RaycastHit hit;
@@ -27,12 +31,18 @@ public class PlayerPickup : MonoBehaviour
         {
             if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, pickupRange, pickupLayer))
             {
-
                 AmmoBoxPickup ammoBoxPickup = hit.collider.GetComponent<AmmoBoxPickup>();
                 if (ammoBoxPickup != null)
                 {
                     ammoManager.AddAmmoBox(ammoBoxPickup, ammoBoxPickup.boxColor);
                     Debug.Log($"Picked up {ammoBoxPickup.boxColor} ammo box.");
+
+                    // Play ammo pickup sound
+                    if (audioSource != null && ammoPickupClip != null)
+                    {
+                        audioSource.PlayOneShot(ammoPickupClip);
+                    }
+
                     Destroy(hit.collider.gameObject); // Remove the ammo box from the world after picking up
                 }
             }
