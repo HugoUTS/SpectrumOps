@@ -14,6 +14,12 @@ public class Restart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1;
