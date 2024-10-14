@@ -5825,6 +5825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78539605a2904fc479a48c802473c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPoint: {fileID: 0}
   playerCamera: {fileID: 4459864850199571408}
   playerController: {fileID: 4459864851523846470}
   lerpTime: 0
@@ -9881,6 +9882,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872b6f9e4e05e0d498a3ce1998c14051, type: 3}
+--- !u!1 &5038179575257091117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3002946767364286351, guid: 872b6f9e4e05e0d498a3ce1998c14051,
+    type: 3}
+  m_PrefabInstance: {fileID: 5038179575257091116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5039404081125867314
 Transform:
   m_ObjectHideFlags: 0
@@ -11988,6 +11995,11 @@ PrefabInstance:
       propertyPath: hudController
       value: 
       objectReference: {fileID: 2030169234}
+    - target: {fileID: 3115167846784317895, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: interactBox
+      value: 
+      objectReference: {fileID: 5038179575257091117}
     - target: {fileID: 3510174286101040840, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: m_audioClip
