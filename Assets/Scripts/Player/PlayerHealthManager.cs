@@ -44,4 +44,23 @@ public class PlayerHealthManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "ProjectileRed":
+                playerHealth -= 20;
+                break;
+            case "ProjectileYellow":
+                playerHealth -= 20;
+                break;
+            case "ProjectileGreen":
+                playerHealth -= 20;
+                break;
+            case "ProjectileBlue":
+                playerHealth -= 20;
+                break;
+        }
+    }
 }
