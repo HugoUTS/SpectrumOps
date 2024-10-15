@@ -14,12 +14,7 @@ public class GunShootingSound : MonoBehaviour
         if (Input.GetKeyDown(fireKey))
         {
             // Check if the current chamber has a bullet
-            if (revolverChamber.chambers[revolverChamber.currentChamber] == 1)
-            {
-                // Play the shooting sound
-                PlayGunShotSound();
-            }
-            else
+            if (revolverChamber.chambers[revolverChamber.currentChamber] == 0)
             {
                 // Play the empty chamber sound (click sound)
                 PlayEmptyChamberSound();
@@ -28,7 +23,7 @@ public class GunShootingSound : MonoBehaviour
     }
 
     // Function to play the gunshot sound
-    private void PlayGunShotSound()
+    public void PlayGunShotSound()
     {
         if (gunShotClip != null)
         {

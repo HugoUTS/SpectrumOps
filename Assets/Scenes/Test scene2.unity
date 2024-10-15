@@ -1428,8 +1428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: When you have two weapons, taking one discards your currently held
-    weapon.
+  textToDisplay: When you have two ammo boxes, taking one discards your currently
+    held box.
 --- !u!65 &283754519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &765626484
 Transform:
   m_ObjectHideFlags: 0
@@ -3341,7 +3341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: Press "Left Mouse Button" to shoot
+  textToDisplay: Press "Left Mouse Button" to shoot, and "R" to reload
 --- !u!135 &765626486
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6530,7 +6530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextTrigger: {fileID: 0}
   tutorialText: {fileID: 1221895735}
-  textToDisplay: Press "1" and "2" or roll the mouse wheel to swap weapons
+  textToDisplay: Roll the mouse wheel to cycle between chambers
 --- !u!65 &1880441310
 BoxCollider:
   m_ObjectHideFlags: 0
