@@ -5,35 +5,30 @@ using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
-    public Transform playerTransform; 
-    public float movementDelay = 5.0f; 
-    private NavMeshAgent agent;
-    private Vector3 targetPosition;    
-    private bool canMove = false;      
+    public Transform playerTransform;        // Reference to the player's transform
+    private NavMeshAgent agent;              // Reference to the NavMeshAgent
+    public float activationDistance = 5.0f;  // Distance within which the agent will start moving
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        targetPosition = playerTransform.position;
-        StartCoroutine(StartMovementAfterDelay());
-    }
-
-    IEnumerator StartMovementAfterDelay()
-    {
-        
-        yield return new WaitForSeconds(movementDelay);
-        
-        
-        canMove = true;
     }
 
     void Update()
     {
-        if (canMove)
+        // Calculate the distance between the agent and the player
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        // Check if the player is within the activation distance
+        if (distanceToPlayer <= activationDistance)
         {
-            
-            targetPosition = playerTransform.position;
-            agent.destination = targetPosition;
+            // Set the NavMeshAgent destination to the player's position
+            agent.SetDestination(playerTransform.position);
+        }
+        else
+        {
+            // Optional: Stop the agent if the player is out of range
+            //agent.ResetPath();
         }
     }
 }

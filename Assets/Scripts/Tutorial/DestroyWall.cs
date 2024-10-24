@@ -25,4 +25,5 @@ public class DestroyWall : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
