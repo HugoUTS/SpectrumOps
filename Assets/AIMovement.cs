@@ -5,20 +5,35 @@ using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
-    public Transform playerTransform;
+    public Transform playerTransform; 
+    public float movementDelay = 5.0f; 
     private NavMeshAgent agent;
+    private Vector3 targetPosition;    
+    private bool canMove = false;      
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        targetPosition = playerTransform.position;
+        StartCoroutine(StartMovementAfterDelay());
+    }
+
+    IEnumerator StartMovementAfterDelay()
+    {
+        
+        yield return new WaitForSeconds(movementDelay);
+        
+        
+        canMove = true;
     }
 
     void Update()
     {
-        // Get the player's position, but use the AI's current Y position to ignore vertical movement
-        Vector3 targetPosition = new Vector3(playerTransform.position.x, transform.position.y, playerTransform.position.z);
-
-        // Set the NavMeshAgent destination to the adjusted position
-        agent.destination = targetPosition;
+        if (canMove)
+        {
+            
+            targetPosition = playerTransform.position;
+            agent.destination = targetPosition;
+        }
     }
 }
