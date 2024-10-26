@@ -16,7 +16,7 @@ public class StartLevel : MonoBehaviour
         {
             LevelStartUI[0].SetActive(true);
             LevelStartUI[1].SetActive(true);
-            elevator.hostagesGoal = 1;
+            elevator.hostagesGoal = rescueGoal;
             EndTrigger.SetActive(true);
             Destroy(gameObject);
         }
