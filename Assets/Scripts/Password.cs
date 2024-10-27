@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Password : MonoBehaviour
@@ -19,10 +17,13 @@ public class Password : MonoBehaviour
 
     public float resetTimer = 1;
 
+    // Reference to PasswordSoundManager
+    public PasswordSoundManager soundManager;
+
     // Update is called once per frame
     void Update()
     {
-        if(resetTimer > 0)
+        if (resetTimer > 0)
         {
             resetTimer -= Time.deltaTime;
         }
@@ -36,32 +37,48 @@ public class Password : MonoBehaviour
             checkPassword = true;
         }
 
-
         if (checkPassword == true)
         {
             CheckPassword();
             checkPassword = false;
         }
-
-        if (correctCount == 5)
-        {
-            OpenDoor();
-        }
     }
+
     private void CheckPassword()
     {
         Debug.Log("Checking password");
+        correctCount = 0; // Reset the correct count
+
         for (int i = 0; i < guesses.Length; i++)
         {
-            if(guesses[i] != password[i])
+            if (guesses[i] != password[i])
             {
+                // Play the wrong password sound
+                if (soundManager != null)
+                {
+                    soundManager.PlayWrongPasswordSound();
+                }
+
+                // Trigger the wrong animation and reset
                 doorAnimator.SetTrigger("Wrong");
                 ResetPassword();
+                return; // Exit early if a wrong guess is found
             }
             else
             {
                 correctCount += 1;
             }
+        }
+
+        // If all guesses are correct, play the correct password sound and open the door
+        if (correctCount == password.Length)
+        {
+            if (soundManager != null)
+            {
+                soundManager.PlayCorrectPasswordSound();
+            }
+
+            OpenDoor();
         }
     }
 
@@ -80,7 +97,8 @@ public class Password : MonoBehaviour
     private void OpenDoor()
     {
         doorAnimator.SetTrigger("Correct");
-        Destroy(this);
+        // Delay destroying the script to allow the sound to play
+        Destroy(this, 0.5f); // Adds a delay to give time for the sound to play
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -89,6 +107,7 @@ public class Password : MonoBehaviour
         Debug.Log(collisionTag);
         resetTimer = 1;
         hitCount += 1;
+
         for (int i = 0; i < guesses.Length; i++)
         {
             if (guesses[i] == "")
@@ -97,36 +116,29 @@ public class Password : MonoBehaviour
                 switch (collisionTag)
                 {
                     case "ProjectileRed":
-                        {
-                            lights[i].GetComponent<MeshRenderer>().material = lightColors[1];
-                            guesses[i] = "R";
-                        }
+                        lights[i].GetComponent<MeshRenderer>().material = lightColors[1];
+                        guesses[i] = "R";
                         break;
 
                     case "ProjectileYellow":
-                        {
-                            lights[i].GetComponent<MeshRenderer>().material = lightColors[2];
-                            guesses[i] = "Y";
-                        }
+                        lights[i].GetComponent<MeshRenderer>().material = lightColors[2];
+                        guesses[i] = "Y";
                         break;
 
                     case "ProjectileGreen":
-                        {
-                            lights[i].GetComponent<MeshRenderer>().material = lightColors[3];
-                            guesses[i] = "G";
-                        }
+                        lights[i].GetComponent<MeshRenderer>().material = lightColors[3];
+                        guesses[i] = "G";
                         break;
 
                     case "ProjectileBlue":
-                        {
-                            lights[i].GetComponent<MeshRenderer>().material = lightColors[4];
-                            guesses[i] = "B";
-                        }
+                        lights[i].GetComponent<MeshRenderer>().material = lightColors[4];
+                        guesses[i] = "B";
                         break;
                 }
                 return;
             }
         }
+
         Destroy(collision.gameObject);
     }
 }
