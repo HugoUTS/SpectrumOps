@@ -40,7 +40,6 @@ public class RevolverChamber : MonoBehaviour
                 chambers[currentChamber] = 1;  // Mark the chamber as filled
 
                 Color chamberBulletColor = chamberColor[0];  // Default color
-                Color chamberIconColor = chamberColor[0];
 
                 switch (selectedAmmoColor) // Change color of chamber depending on the ammo box's color
                 {
@@ -116,6 +115,18 @@ public class RevolverChamber : MonoBehaviour
         RotateChamberRight();
     }
 
+    // Method to empty all chambers
+    public void EmptyAllChambers()
+    {
+        for (int i = 0; i < totalChambers; i++)
+        {
+            chambers[i] = 0;  // Mark each chamber as empty
+            chamberTag[i] = ""; // Clear the chamber tag
+            hudController.UpdateSpecificChamberHUD(i, false, chamberColor[0]);  // Update HUD to show empty
+        }
+        Debug.Log("All chambers have been emptied.");
+    }
+
     public void RotateChamberLeft()
     {
         currentChamber = (currentChamber - 1 + totalChambers) % totalChambers;
@@ -150,7 +161,7 @@ public class RevolverChamber : MonoBehaviour
         // Load a bullet when the player presses 'R' (if the chamber is empty)
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if(chambers[currentChamber] == 1)
+            if (chambers[currentChamber] == 1)
             {
                 RotateChamberRight();
             }
@@ -168,6 +179,12 @@ public class RevolverChamber : MonoBehaviour
             }
         }
 
+        // Empty all chambers when the player presses 'Tab'
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            EmptyAllChambers();
+        }
+
         // Optional chamber rotation for testing
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
@@ -175,7 +192,7 @@ public class RevolverChamber : MonoBehaviour
             RotateChamberLeft();
         }
 
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f )
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             gunAnim.SetTrigger("RotR");
             RotateChamberRight();
