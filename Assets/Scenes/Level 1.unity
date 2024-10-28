@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -795,6 +795,7 @@ GameObject:
   - component: {fileID: 48313263}
   - component: {fileID: 48313262}
   - component: {fileID: 48313261}
+  - component: {fileID: 48313265}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -888,6 +889,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 653624948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48313265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48313260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 22a61e0d07784ba43be707de3e089bcd, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &54894940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,11 +1237,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 318154624}
+      addedObject: {fileID: 318154623}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 318154623}
+      addedObject: {fileID: 318154630}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318154632}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318154631}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &101169565
 GameObject:
@@ -1337,25 +1377,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: 5793d6b0d97734945abb642a33d6a065,
     type: 3}
   bulletSpawnPoint: {fileID: 1128478564}
-  bulletSpeed: 10
+  bulletSpeed: 5
   shootInterval: 2
---- !u!114 &116989807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116989805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &116989808
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1412,6 +1435,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 729624581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &116989813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116989805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 11
+--- !u!195 &116989814
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116989805}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &116989815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116989805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 14
 --- !u!1 &133563192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
@@ -1582,11 +1658,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 466746343}
+      addedObject: {fileID: 466746342}
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 466746342}
+      addedObject: {fileID: 466746349}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 466746351}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 466746350}
   m_SourcePrefab: {fileID: 100100000, guid: 1097e1d87a3e0ba4ca374eb355693196, type: 3}
 --- !u!1 &151173838
 GameObject:
@@ -2437,11 +2521,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1961805861}
+      addedObject: {fileID: 1961805866}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1961805866}
+      addedObject: {fileID: 1961805868}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1961805870}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1961805869}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &284236150
 GameObject:
@@ -2787,23 +2879,6 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1623575220}
   bulletSpeed: 10
   shootInterval: 1
---- !u!114 &318154624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318154622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &318154625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2860,6 +2935,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 86407137}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &318154630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318154622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 5
+--- !u!195 &318154631
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318154622}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &318154632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318154622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 10
 --- !u!1 &318707201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,25 +3876,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: f9bde712a21e57e4497abb06b6cab2bf,
     type: 3}
   bulletSpawnPoint: {fileID: 1851933163}
-  bulletSpeed: 10
+  bulletSpeed: 5
   shootInterval: 2
---- !u!114 &466746343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466746341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &466746344
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3823,6 +3934,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 145266354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &466746349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466746341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileBlue
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 11
+--- !u!195 &466746350
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466746341}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &466746351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466746341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 14
 --- !u!1 &496236045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,13 +4011,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496236045}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.043577887, y: 0.043577887, z: -0.0019026523, w: 0.99809736}
+  m_LocalRotation: {x: 0, y: 0.043619405, z: 0, w: 0.9990483}
   m_LocalPosition: {x: 0.068, y: 3.8, z: 1.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1321107524}
-  m_LocalEulerAnglesHint: {x: 5, y: 5, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 5, z: 0}
 --- !u!1001 &530540484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3961,11 +4125,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1163354566}
+      addedObject: {fileID: 1163354571}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1163354571}
+      addedObject: {fileID: 1163354573}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1163354575}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1163354574}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &555544710
 GameObject:
@@ -4208,11 +4380,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1285461503}
+      addedObject: {fileID: 1285461502}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1285461502}
+      addedObject: {fileID: 1285461509}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1285461511}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1285461510}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &574059491
 GameObject:
@@ -4874,11 +5054,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 663344582}
+      addedObject: {fileID: 663344581}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 663344581}
+      addedObject: {fileID: 663344588}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 663344590}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 663344589}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &663344580 stripped
 GameObject:
@@ -4903,23 +5091,6 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 431158809}
   bulletSpeed: 10
   shootInterval: 1
---- !u!114 &663344582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663344580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &663344583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4976,6 +5147,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 660109118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &663344588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663344580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 3
+--- !u!195 &663344589
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663344580}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &663344590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663344580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 20
 --- !u!114 &712632054 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4192103628830596448, guid: ae6e2f20276a8234ba0ed1d8627d6445,
@@ -5305,11 +5529,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 116989807}
+      addedObject: {fileID: 116989806}
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 116989806}
+      addedObject: {fileID: 116989813}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116989815}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116989814}
   m_SourcePrefab: {fileID: 100100000, guid: 1097e1d87a3e0ba4ca374eb355693196, type: 3}
 --- !u!1 &735781070
 GameObject:
@@ -6465,11 +6697,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2023139855}
+      addedObject: {fileID: 2023139854}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2023139854}
+      addedObject: {fileID: 2023139861}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023139863}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023139862}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &901946542
 GameObject:
@@ -7025,23 +7265,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1192202676}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &952208869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952208868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &952208870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7115,6 +7338,59 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1552968800}
   bulletSpeed: 10
   shootInterval: 3
+--- !u!114 &952208876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952208868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileBlue
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 5
+--- !u!195 &952208877
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952208868}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &952208878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952208868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 10
 --- !u!1 &965490571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
@@ -7136,25 +7412,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: 5793d6b0d97734945abb642a33d6a065,
     type: 3}
   bulletSpawnPoint: {fileID: 1536948018}
-  bulletSpeed: 8
-  shootInterval: 1
---- !u!114 &965490573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965490571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
+  bulletSpeed: 5
+  shootInterval: 2
 --- !u!54 &965490574
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7211,6 +7470,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1696660153}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &965490579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965490571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 11
+--- !u!195 &965490580
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965490571}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &965490581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965490571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 14
 --- !u!1 &971561186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7835,25 +8147,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: f9bde712a21e57e4497abb06b6cab2bf,
     type: 3}
   bulletSpawnPoint: {fileID: 1489463465}
-  bulletSpeed: 10
+  bulletSpeed: 8
   shootInterval: 2
---- !u!114 &1093645558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093645556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &1093645559
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7910,6 +8205,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1274516587}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1093645564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093645556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileBlue
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 8
+--- !u!195 &1093645565
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093645556}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1093645566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093645556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 12
 --- !u!1 &1098662122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8386,23 +8734,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 530540484}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1163354566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163354565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &1163354567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8476,6 +8807,59 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1026690820}
   bulletSpeed: 10
   shootInterval: 2
+--- !u!114 &1163354573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163354565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 3
+--- !u!195 &1163354574
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163354565}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1163354575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163354565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 15
 --- !u!1 &1172548065
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,11 +8993,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 952208869}
+      addedObject: {fileID: 952208874}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 952208874}
+      addedObject: {fileID: 952208876}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 952208878}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 952208877}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &1196621925 stripped
 GameObject:
@@ -8636,25 +9028,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: f9bde712a21e57e4497abb06b6cab2bf,
     type: 3}
   bulletSpawnPoint: {fileID: 1172548066}
-  bulletSpeed: 8
-  shootInterval: 1
---- !u!114 &1196621927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196621925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
+  bulletSpeed: 5
+  shootInterval: 2
 --- !u!54 &1196621928
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8711,6 +9086,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2000428322}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1196621933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196621925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileBlue
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 11
+--- !u!195 &1196621934
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196621925}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1196621935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196621925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 14
 --- !u!1 &1198060862
 GameObject:
   m_ObjectHideFlags: 0
@@ -9091,11 +9519,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1093645558}
+      addedObject: {fileID: 1093645557}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1093645557}
+      addedObject: {fileID: 1093645564}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1093645566}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1093645565}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &1285461501 stripped
 GameObject:
@@ -9120,23 +9556,6 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1583465054}
   bulletSpeed: 8
   shootInterval: 1
---- !u!114 &1285461503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285461501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &1285461504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9193,6 +9612,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 569076902}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1285461509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285461501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 4
+--- !u!195 &1285461510
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285461501}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 4
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1285461511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285461501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 20
 --- !u!4 &1286902773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8078090190063417664, guid: e1ff2f403f422ab4ebdab875ab8d26c3,
@@ -9462,24 +9934,7 @@ MonoBehaviour:
     type: 3}
   bulletSpawnPoint: {fileID: 496236046}
   bulletSpeed: 10
-  shootInterval: 2
---- !u!114 &1321107520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321107518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
+  shootInterval: 3
 --- !u!54 &1321107521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9536,6 +9991,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2073831270}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321107526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321107518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 4
+--- !u!114 &1321107527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321107518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 18
+--- !u!195 &1321107528
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321107518}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1327167127
 GameObject:
   m_ObjectHideFlags: 0
@@ -11792,11 +12300,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 965490573}
+      addedObject: {fileID: 965490572}
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 965490572}
+      addedObject: {fileID: 965490579}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 965490581}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 965490580}
   m_SourcePrefab: {fileID: 100100000, guid: 1097e1d87a3e0ba4ca374eb355693196, type: 3}
 --- !u!1 &1696808952
 GameObject:
@@ -13501,23 +14017,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 257343767}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1961805861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961805860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &1961805862
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13591,6 +14090,59 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1765943838}
   bulletSpeed: 10
   shootInterval: 2
+--- !u!114 &1961805868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961805860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 3
+--- !u!195 &1961805869
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961805860}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1961805870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961805860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 15
 --- !u!1 &1983027893
 GameObject:
   m_ObjectHideFlags: 0
@@ -14218,11 +14770,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1196621927}
+      addedObject: {fileID: 1196621926}
     - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1196621926}
+      addedObject: {fileID: 1196621933}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196621935}
+    - targetCorrespondingSourceObject: {fileID: 4413203930662975582, guid: 1097e1d87a3e0ba4ca374eb355693196,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196621934}
   m_SourcePrefab: {fileID: 100100000, guid: 1097e1d87a3e0ba4ca374eb355693196, type: 3}
 --- !u!1 &2023139853 stripped
 GameObject:
@@ -14245,25 +14805,8 @@ MonoBehaviour:
   Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: 5793d6b0d97734945abb642a33d6a065,
     type: 3}
   bulletSpawnPoint: {fileID: 1837596064}
-  bulletSpeed: 8
+  bulletSpeed: 6
   shootInterval: 1
---- !u!114 &2023139855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023139853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!54 &2023139856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14320,6 +14863,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 900492550}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023139861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023139853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 8
+--- !u!195 &2023139862
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023139853}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 2
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 150
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2023139863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023139853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f236f7e8544634189b2035dba6145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 4459864851523846471}
+  activationDistance: 12
 --- !u!1 &2030169229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 287995163153714336, guid: 872b6f9e4e05e0d498a3ce1998c14051,
@@ -14690,11 +15286,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1321107520}
+      addedObject: {fileID: 1321107519}
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1321107519}
+      addedObject: {fileID: 1321107526}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1321107527}
+    - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1321107528}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!1 &2106535741
 GameObject:
@@ -15401,6 +16005,12 @@ GameObject:
 --- !u!1 &4459864851523846470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4096446583997673848, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+    type: 3}
+  m_PrefabInstance: {fileID: 8875990517788742613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4459864851523846471 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5575956766184829792, guid: 22cb0f9beb9a2a840999da9e895e5c55,
     type: 3}
   m_PrefabInstance: {fileID: 8875990517788742613}
   m_PrefabAsset: {fileID: 0}
