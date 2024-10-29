@@ -18,9 +18,12 @@ public class Level2ActivateTrigger : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        for (int i = 0; i < triggers.Length; i++)
+        if(collision.gameObject.tag == "Player")
         {
-            triggers[i].SetActive(true);
+            for (int i = 0; i < triggers.Length; i++)
+            {
+                triggers[i].SetActive(true);
+            }
         }
     }
 }
