@@ -7221,6 +7221,11 @@ PrefabInstance:
       propertyPath: shootInterval
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_Name
@@ -7313,6 +7318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnHeightOffset
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -8538,6 +8548,11 @@ PrefabInstance:
       propertyPath: activationDistance
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
@@ -9702,6 +9717,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7870911917559323166, guid: e1ea29bbddf626e489413f871774d3ab,
         type: 3}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_Name
@@ -21289,6 +21309,11 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 4459864851523846472}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
@@ -33020,6 +33045,11 @@ PrefabInstance:
       propertyPath: activationDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
@@ -37883,6 +37913,11 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_Name
@@ -39320,6 +39355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: activationDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -44778,6 +44818,11 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_Name
@@ -45667,6 +45712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: activationDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -46743,6 +46793,11 @@ PrefabInstance:
       propertyPath: activationDistance
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
@@ -46838,6 +46893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnHeightOffset
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -47141,6 +47201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnHeightOffset
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -60351,6 +60416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: activationDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -77153,6 +77223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnHeightOffset
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -99530,6 +99605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958265197139309642, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}

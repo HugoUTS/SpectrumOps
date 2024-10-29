@@ -1518,7 +1518,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -2863,7 +2863,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -3279,7 +3279,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -4278,7 +4278,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5599,7 +5599,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -8541,74 +8541,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1163354570}
   m_LocalEulerAnglesHint: {x: 0, y: 2, z: 0}
---- !u!1001 &1071259442
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -57.19169
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -29.883224
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6070600225914571740, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6315104297995855600, guid: 67f06b064afc8c5469457a9ff5ef821a,
-        type: 3}
-      propertyPath: m_Name
-      value: AmmoBoxBlue
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 67f06b064afc8c5469457a9ff5ef821a, type: 3}
 --- !u!1 &1093645556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
@@ -8672,7 +8604,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -9257,7 +9189,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -9800,7 +9732,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -10179,7 +10111,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -10422,74 +10354,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67f06b064afc8c5469457a9ff5ef821a, type: 3}
---- !u!1001 &1385231909
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6618787926691895349, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_Name
-      value: AmmoBoxRed
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -57.912376
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -29.333786
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7886201267715705134, guid: 79fdb8a6099451944abafed1e11366c2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 79fdb8a6099451944abafed1e11366c2, type: 3}
 --- !u!1 &1396545473
 GameObject:
   m_ObjectHideFlags: 0
@@ -14146,7 +14010,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -14851,7 +14715,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -15810,6 +15674,11 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 4459864851523846471}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
@@ -16263,6 +16132,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7870911917559323166, guid: 5793d6b0d97734945abb642a33d6a065,
         type: 3}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4920567594522297614, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_Name
@@ -16678,5 +16552,3 @@ SceneRoots:
   - {fileID: 729624581}
   - {fileID: 145266354}
   - {fileID: 836914691785713615}
-  - {fileID: 1071259442}
-  - {fileID: 1385231909}
