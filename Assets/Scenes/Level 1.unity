@@ -1550,7 +1550,7 @@ MonoBehaviour:
   Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
   destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
   soundVolume: 1
-  spawnHeightOffset: 11
+  spawnHeightOffset: 5
 --- !u!195 &116989814
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4310,7 +4310,7 @@ MonoBehaviour:
   Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
   destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
   soundVolume: 1
-  spawnHeightOffset: 11
+  spawnHeightOffset: 5
 --- !u!195 &466746350
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15813,7 +15813,7 @@ PrefabInstance:
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16255,7 +16255,7 @@ PrefabInstance:
     - target: {fileID: 2868409844406335372, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4273470916343721067, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
