@@ -11,7 +11,7 @@ public class DestroyWall : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == tagName)
+        if (collision.gameObject.tag == tagName || collision.gameObject.tag == "Laser")
         {
             // Play the destruction sound at the wall's position without requiring the wall to exist afterward
             AudioSource.PlayClipAtPoint(destructionClip, transform.position, soundVolume);
