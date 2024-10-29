@@ -17,6 +17,7 @@ TagManager:
   - Green
   - Blue
   - Pickup
+  - Laser
   layers:
   - Default
   - TransparentFX
