@@ -16,19 +16,23 @@ public class AIMovement : MonoBehaviour
 
     void Update()
     {
-        // Calculate the distance between the agent and the player
-        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        //Check if the player transform exists
+        if (playerTransform)
+        {
+            // Calculate the distance between the agent and the player
+            float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        // Check if the player is within the activation distance
-        if (distanceToPlayer <= activationDistance)
-        {
-            // Set the NavMeshAgent destination to the player's position
-            agent.SetDestination(playerTransform.position);
-        }
-        else
-        {
-            // Optional: Stop the agent if the player is out of range
-            //agent.ResetPath();
+            // Check if the player is within the activation distance
+            if (distanceToPlayer <= activationDistance)
+            {
+                // Set the NavMeshAgent destination to the player's position
+                agent.SetDestination(playerTransform.position);
+            }
+            else
+            {
+                // Optional: Stop the agent if the player is out of range
+                //agent.ResetPath();
+            }
         }
     }
 }
