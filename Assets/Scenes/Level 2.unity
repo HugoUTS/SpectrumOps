@@ -7211,6 +7211,21 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4273470916343721067, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: bulletSpeed
@@ -7296,6 +7311,11 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7318,6 +7338,26 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnHeightOffset
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -7387,7 +7427,7 @@ PrefabInstance:
     - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8526,17 +8566,17 @@ PrefabInstance:
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_Speed
-      value: 3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_AngularSpeed
-      value: 150
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -8546,7 +8586,22 @@ PrefabInstance:
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: activationDistance
-      value: 17
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -8556,7 +8611,7 @@ PrefabInstance:
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9711,12 +9766,32 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4273470916343721067, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: Bullet_Handgun_Blue
       value: 
       objectReference: {fileID: 7870911917559323166, guid: e1ea29bbddf626e489413f871774d3ab,
         type: 3}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -9790,7 +9865,7 @@ PrefabInstance:
     - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21304,11 +21379,31 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 4459864851523846472}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -21317,7 +21412,7 @@ PrefabInstance:
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33035,6 +33130,11 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: playerTransform
@@ -33044,6 +33144,21 @@ PrefabInstance:
         type: 3}
       propertyPath: activationDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -37913,6 +38028,21 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -37977,6 +38107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39346,6 +39481,11 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: playerTransform
@@ -39355,6 +39495,21 @@ PrefabInstance:
         type: 3}
       propertyPath: activationDistance
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -44816,7 +44971,27 @@ PrefabInstance:
     - target: {fileID: 2868409844406335372, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: spawnHeightOffset
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -44877,6 +45052,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45703,6 +45888,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDEmUP
       objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: playerTransform
@@ -45713,6 +45908,26 @@ PrefabInstance:
       propertyPath: activationDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -45721,7 +45936,7 @@ PrefabInstance:
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46771,17 +46986,17 @@ PrefabInstance:
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_Speed
-      value: 3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_AngularSpeed
-      value: 150
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -46791,7 +47006,22 @@ PrefabInstance:
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: activationDistance
-      value: 17
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -46801,7 +47031,7 @@ PrefabInstance:
     - target: {fileID: 7197525448832972771, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: spawnHeightOffset
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46894,6 +47124,26 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -46962,7 +47212,7 @@ PrefabInstance:
     - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47195,12 +47445,32 @@ PrefabInstance:
     - target: {fileID: 2183543562116953307, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: activationDistance
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2868409844406335372, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: spawnHeightOffset
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
@@ -47266,6 +47536,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BaseOffset
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60407,6 +60687,16 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195372121370277628, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: playerTransform
@@ -60415,7 +60705,27 @@ PrefabInstance:
     - target: {fileID: 4829301148476660432, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
       propertyPath: activationDistance
-      value: 10
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931309814528927594, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5937439213819120639, guid: 538b31d66c3223541a82687b31218e7e,
         type: 3}
@@ -77224,6 +77534,21 @@ PrefabInstance:
       propertyPath: spawnHeightOffset
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261595288259235142, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4609751730544280296, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -77288,6 +77613,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5841861359943222925, guid: 2e9185b3b7f3e2a4f86c740e0e72f2e6,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

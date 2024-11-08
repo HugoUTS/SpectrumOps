@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -572,23 +572,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1009236271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &123454427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123454426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileRed
-  destroyedWall: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!64 &123454428
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -619,9 +602,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123454426}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_Drag: 2
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -638,6 +621,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &123454433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123454426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileRed
+  Model: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 0
 --- !u!1001 &127345781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7252506781058590654, guid: 5eb03e86a8f1b3942a9d399a122fa388,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 741111387}
+      addedObject: {fileID: 741111390}
   m_SourcePrefab: {fileID: 100100000, guid: 5eb03e86a8f1b3942a9d399a122fa388, type: 3}
 --- !u!224 &232065408 stripped
 RectTransform:
@@ -1599,7 +1599,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1934663279}
+      addedObject: {fileID: 1934663282}
   m_SourcePrefab: {fileID: 100100000, guid: adf7d4ff6532e3b4f8d4d6c177316fe2, type: 3}
 --- !u!1 &296130374 stripped
 GameObject:
@@ -2406,9 +2406,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512006956}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_Drag: 2
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2425,7 +2425,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &512006963
+--- !u!114 &512006967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2434,14 +2434,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 512006956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
   destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
   soundVolume: 1
+  spawnHeightOffset: 0
 --- !u!1 &512604602 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 759047409337645240, guid: 22cb0f9beb9a2a840999da9e895e5c55,
@@ -3115,9 +3115,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741111382}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_Drag: 3
+  m_AngularDrag: 3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3157,7 +3157,7 @@ CapsuleCollider:
   m_Height: 6
   m_Direction: 1
   m_Center: {x: 0, y: 3.2, z: 0}
---- !u!114 &741111387
+--- !u!114 &741111390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3166,14 +3166,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 741111382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: ProjectileBlue
-  destroyedWall: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
-    type: 3}
+  Model: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb, type: 3}
   destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
   soundVolume: 1
+  spawnHeightOffset: 2.5
 --- !u!1 &747458760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,7 +4504,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 123454427}
+      addedObject: {fileID: 123454433}
   m_SourcePrefab: {fileID: 100100000, guid: adf7d4ff6532e3b4f8d4d6c177316fe2, type: 3}
 --- !u!1 &1036436588
 GameObject:
@@ -5557,7 +5557,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: adf7d4ff6532e3b4f8d4d6c177316fe2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 512006963}
+      addedObject: {fileID: 512006967}
   m_SourcePrefab: {fileID: 100100000, guid: adf7d4ff6532e3b4f8d4d6c177316fe2, type: 3}
 --- !u!1 &1512318241
 GameObject:
@@ -6743,23 +6743,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 287450687}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1934663279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934663278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: ProjectileGreen
-  destroyedWall: {fileID: 2460640142907343942, guid: 42d7aaf4b160740498bcf3ec0341c0c8,
-    type: 3}
-  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
-  soundVolume: 1
 --- !u!64 &1934663280
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6790,9 +6773,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934663278}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_Drag: 2
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -6809,6 +6792,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1934663282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934663278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ac4f0ee6d0b449b7cfd5989aa9d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: ProjectileGreen
+  Model: {fileID: 2460640142907343942, guid: 42d7aaf4b160740498bcf3ec0341c0c8, type: 3}
+  destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
+  soundVolume: 1
+  spawnHeightOffset: 0
 --- !u!1 &1950077532
 GameObject:
   m_ObjectHideFlags: 0
@@ -12529,11 +12529,21 @@ PrefabInstance:
       propertyPath: hudController
       value: 
       objectReference: {fileID: 2030169234}
+    - target: {fileID: 6795561280615750138, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 439
+      objectReference: {fileID: 0}
     - target: {fileID: 7563276143738928340, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 1605081423}
+    - target: {fileID: 7958265197139309642, guid: 22cb0f9beb9a2a840999da9e895e5c55,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 8392734354463127127, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: pauseUI
