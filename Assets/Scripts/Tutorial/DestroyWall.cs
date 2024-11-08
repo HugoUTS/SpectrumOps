@@ -8,6 +8,7 @@ public class DestroyWall : MonoBehaviour
     public GameObject destroyedWall;           // Broken wall prefab
     public AudioClip destructionClip;          // Sound effect for the destruction
     public float soundVolume = 1.0f;           // Volume for the destruction sound
+    public UnlockTally tally;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,6 +21,11 @@ public class DestroyWall : MonoBehaviour
             GameObject brokenWall = Instantiate(destroyedWall, transform.position, transform.rotation);
 
             brokenWall.transform.localScale = new Vector3(transform.localScale.x, gameObject.transform.localScale.y * 0.2f, gameObject.transform.localScale.z * 0.2f);
+
+            if(tally)
+            {
+                tally.buttonsLeft -= 1;
+            }
 
             // Destroy the original wall object immediately
             Destroy(gameObject);

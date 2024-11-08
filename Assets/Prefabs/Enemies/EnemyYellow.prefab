@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29066d094a5c53843ab0b34a9e77c545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: e1ea29bbddf626e489413f871774d3ab,
+  Bullet_Handgun_Blue: {fileID: 7870911917559323166, guid: e76aee4b8b476d0408daafcd6367ba07,
     type: 3}
   bulletSpawnPoint: {fileID: 5007702827382741913}
   bulletSpeed: 10
