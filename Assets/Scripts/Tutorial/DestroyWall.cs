@@ -9,6 +9,7 @@ public class DestroyWall : MonoBehaviour
     public AudioClip destructionClip;          // Sound effect for the destruction
     public float soundVolume = 1.0f;           // Volume for the destruction sound
     public UnlockTally tally;
+    public GameObject level3Light;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,6 +26,11 @@ public class DestroyWall : MonoBehaviour
             if(tally)
             {
                 tally.buttonsLeft -= 1;
+            }
+
+            if (level3Light)
+            {
+                level3Light.SetActive(true);
             }
 
             // Destroy the original wall object immediately

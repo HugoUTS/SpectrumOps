@@ -46,10 +46,5 @@ public class EnemyWaveManager : MonoBehaviour
                 isWaveDone[1] = true;
             }
         }
-
-        if (kills >= 9)
-        {
-            lastLight.SetActive(true);
-        }
     }
 }
