@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveLaser : MonoBehaviour
@@ -9,9 +8,12 @@ public class MoveLaser : MonoBehaviour
     public float duration;
     private float current, target;
 
+    public AudioSource laserActivationSound; // Assign the AudioSource in the Inspector
+
     // Start is called before the first frame update
     void Start()
     {
+        PlayLaserSound(); // Play the sound on activation
         StartCoroutine(Wait());
     }
 
@@ -19,7 +21,11 @@ public class MoveLaser : MonoBehaviour
     void Update()
     {
         current = Mathf.MoveTowards(current, target, 0.02f * Time.deltaTime);
-        transform.position = Vector3.Lerp(new Vector3(pointA.transform.position.x, pointA.transform.position.y, pointA.transform.position.z), new Vector3(pointB.transform.position.x, pointB.transform.position.y, pointB.transform.position.z), current);
+        transform.position = Vector3.Lerp(
+            pointA.transform.position,
+            pointB.transform.position,
+            current
+        );
     }
 
     private IEnumerator Wait()
@@ -29,6 +35,14 @@ public class MoveLaser : MonoBehaviour
         if (target == 0)
         {
             target = 1;
+        }
+    }
+
+    private void PlayLaserSound()
+    {
+        if (laserActivationSound != null && !laserActivationSound.isPlaying)
+        {
+            laserActivationSound.Play();
         }
     }
 }
