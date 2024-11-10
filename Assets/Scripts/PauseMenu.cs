@@ -15,65 +15,43 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseUI;
 
-    public 
+    private MusicManager musicManager; // Reference to MusicManager
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Find the MusicManager in the scene
+        musicManager = FindObjectOfType<MusicManager>();
+        if (musicManager == null)
+        {
+            Debug.LogWarning("MusicManager not found in the scene. Music will not be controlled.");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused == false)
+            if (isPaused == false)
             {
-                Time.timeScale = 0;
-                FPSController.enabled = false;
-                playerPickup.enabled = false;
-                ammoManager.enabled = false;
-                revolverChamber.enabled = false;
-                for (int i = 0; i < HUDControllers.Length; i++)
-                {
-                    if(HUDControllers[i] != null)
-                    {
-                        HUDControllers[i].SetActive(false);
-                    }
-                }
-
-                pauseUI.SetActive(true);
-                isPaused = true;
+                PauseGame();
             }
-
             else
             {
-                Time.timeScale = 1;
-                FPSController.enabled = true;
-                playerPickup.enabled = true;
-                ammoManager.enabled = true;
-                revolverChamber.enabled = true;
-                for (int i = 0; i < HUDControllers.Length; i++)
-                {
-                    if (HUDControllers[i] != null)
-                    {
-                        HUDControllers[i].SetActive(true);
-                    }
-                }
-
-                pauseUI.SetActive(false);
-                isPaused = false;
+                ResumeGame();
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if(isPaused == true)
+            if (isPaused == true)
             {
                 Time.timeScale = 1;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (isPaused == true)
@@ -82,6 +60,60 @@ public class PauseMenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
             }
+        }
+    }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+        FPSController.enabled = false;
+        playerPickup.enabled = false;
+        ammoManager.enabled = false;
+        revolverChamber.enabled = false;
+
+        // Disable all HUD elements
+        for (int i = 0; i < HUDControllers.Length; i++)
+        {
+            if (HUDControllers[i] != null)
+            {
+                HUDControllers[i].SetActive(false);
+            }
+        }
+
+        pauseUI.SetActive(true);
+        isPaused = true;
+
+        // Pause all music
+        if (musicManager != null)
+        {
+            musicManager.PauseAllMusic();
+        }
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1;
+        FPSController.enabled = true;
+        playerPickup.enabled = true;
+        ammoManager.enabled = true;
+        revolverChamber.enabled = true;
+
+        // Enable all HUD elements
+        for (int i = 0; i < HUDControllers.Length; i++)
+        {
+            if (HUDControllers[i] != null)
+            {
+                HUDControllers[i].SetActive(true);
+            }
+        }
+
+        pauseUI.SetActive(false);
+        isPaused = false;
+
+        // Resume all music
+        if (musicManager != null)
+        {
+            musicManager.ResumeAllMusic();
         }
     }
 }

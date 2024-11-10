@@ -18,6 +18,7 @@ TagManager:
   - Blue
   - Pickup
   - Laser
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - Weapon
   - Pickup
   - Debris
-  - 
+  - Music
   - 
   - 
   - 
