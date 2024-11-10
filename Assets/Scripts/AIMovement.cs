@@ -8,10 +8,12 @@ public class AIMovement : MonoBehaviour
     public Transform playerTransform;        // Reference to the player's transform
     private NavMeshAgent agent;              // Reference to the NavMeshAgent
     public float activationDistance = 5.0f;  // Distance within which the agent will start moving
+    public Animator animator;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,6 +35,15 @@ public class AIMovement : MonoBehaviour
                 // Optional: Stop the agent if the player is out of range
                 //agent.ResetPath();
             }
+        }
+
+        if (agent.velocity.magnitude > 0.1f)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }
