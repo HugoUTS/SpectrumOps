@@ -9,7 +9,6 @@ public class EnemyWaveManager : MonoBehaviour
     public GameObject[] wave1Objects;
     public GameObject[] wave2Objects;
     public GameObject[] wave3Objects;
-    public GameObject lastLight;
 
     // Start is called before the first frame update
     void Start()
