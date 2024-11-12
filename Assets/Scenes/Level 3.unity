@@ -25202,7 +25202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &752046459
 Transform:
   m_ObjectHideFlags: 0
@@ -83049,6 +83049,7 @@ MonoBehaviour:
   pointA: {fileID: 415292721}
   pointB: {fileID: 669414550}
   duration: 60
+  laserActivationSound: {fileID: 0}
 --- !u!1 &1877516666
 GameObject:
   m_ObjectHideFlags: 0
@@ -89374,7 +89375,6 @@ MonoBehaviour:
   - {fileID: 1298716242}
   - {fileID: 2109610391}
   - {fileID: 119175615}
-  lastLight: {fileID: 715908511}
 --- !u!95 &1942905175
 Animator:
   serializedVersion: 5
