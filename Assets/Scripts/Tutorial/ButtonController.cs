@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     public bool activated = false;            // Track if the button is activated
     public Material onColor;                  // Material to change to when the button is activated
     public Material buttonMaterial;           // Material assigned to the button (set this in the Inspector)
+    public AudioSource buttonAudioSource;     // AudioSource to play the activation sound
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -32,6 +33,12 @@ public class ButtonController : MonoBehaviour
 
                         // Change the button color to the "on" color
                         gameObject.GetComponent<MeshRenderer>().material = onColor;
+
+                        // Play the activation sound
+                        if (buttonAudioSource != null)
+                        {
+                            buttonAudioSource.Play();
+                        }
 
                         Debug.Log("Button activated by matching bullet color!");
                     }
