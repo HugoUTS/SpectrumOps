@@ -11,8 +11,6 @@ public class BossPhaseManager : MonoBehaviour
     public GameObject[] wave3Objects;
     public GameObject[] wave4Objects;
 
-    public GameObject[] connectedLasers;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -55,25 +53,5 @@ public class BossPhaseManager : MonoBehaviour
         {
             wave4Objects[i].SetActive(true);
         }
-    }
-
-    public void RedGeneratorOn()
-    {
-        connectedLasers[0].SetActive(true);
-    }
-
-    public void YellowGeneratorOn()
-    {
-        connectedLasers[1].SetActive(true);
-    }
-
-    public void GreenGeneratorOn()
-    {
-        connectedLasers[2].SetActive(true);
-    }
-
-    public void BlueGeneratorOn()
-    {
-        connectedLasers[3].SetActive(true);
     }
 }
