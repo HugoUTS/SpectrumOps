@@ -7,6 +7,7 @@ public class GeneratorManager : MonoBehaviour
     public bool isDestroyed = false;
     public string tagName = "Projectile"; // Tag of the bullet
     public BossPhaseManager bossManager;
+    public GameObject connectedLaser;
 
     public Material destroyedMaterial;
     public MeshRenderer[] rend;
@@ -30,6 +31,7 @@ public class GeneratorManager : MonoBehaviour
                     rend[i].material = destroyedMaterial;
                 }
                 bossManager.levelAnim.SetInteger("PhaseInt", bossManager.levelAnim.GetInteger("PhaseInt") + 1);
+                connectedLaser.SetActive(false);
                 isDestroyed = true;
             }
         }
