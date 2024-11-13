@@ -17,7 +17,15 @@ public class Restart : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Time.timeScale = 1;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if(SceneManager.GetActiveScene().buildIndex == 5)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))

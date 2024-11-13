@@ -13,6 +13,8 @@ public class GeneratorManager : MonoBehaviour
 
     public GameObject connectedLaser;
 
+    public AudioSource destroyedSound;
+
     private void Start()
     {
         for (int i = 0; i < rend.Length; i++)
@@ -33,6 +35,7 @@ public class GeneratorManager : MonoBehaviour
                 }
                 bossManager.levelAnim.SetInteger("PhaseInt", bossManager.levelAnim.GetInteger("PhaseInt") + 1);
                 connectedLaser.SetActive(false);
+                destroyedSound.Play();
                 isDestroyed = true;
             }
         }
