@@ -9937,6 +9937,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
       propertyPath: tagName
       value: ProjectileRed
       objectReference: {fileID: 0}
@@ -21684,6 +21689,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2460640142907343942, guid: 42d7aaf4b160740498bcf3ec0341c0c8,
         type: 3}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
       propertyPath: tagName
@@ -49354,6 +49364,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
       propertyPath: tagName
       value: ProjectileRed
       objectReference: {fileID: 0}
@@ -50743,6 +50758,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
         type: 3}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
       propertyPath: tagName
@@ -52890,6 +52910,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3873127962705924871, guid: e9b9f64be5238694abefc158b8541251,
         type: 3}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
       propertyPath: tagName
@@ -59675,6 +59700,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2460640142907343942, guid: f885e81650dec6d4c9f3afbd9670dff6,
         type: 3}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
       propertyPath: tagName
@@ -96305,6 +96335,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
       propertyPath: tagName
       value: ProjectileBlue
       objectReference: {fileID: 0}
@@ -96784,6 +96819,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
       propertyPath: tagName
       value: ProjectileRed
       objectReference: {fileID: 0}
@@ -97138,6 +97178,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8402556457882270534, guid: a4b009402cc40274f853816810ad5cbb,
         type: 3}
+    - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
+        type: 3}
+      propertyPath: tally
+      value: 
+      objectReference: {fileID: 1942905173}
     - target: {fileID: 7522350073078501692, guid: b713d49703ce1604eaab6819887383a7,
         type: 3}
       propertyPath: tagName

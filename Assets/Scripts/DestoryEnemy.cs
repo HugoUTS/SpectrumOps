@@ -8,7 +8,8 @@ public class DestroyEnemy : MonoBehaviour
     public GameObject Model;                   // Shattered Model prefab
     public AudioClip destructionClip;          
     public float soundVolume = 1.0f;           
-    public float spawnHeightOffset = 0.5f;     
+    public float spawnHeightOffset = 0.5f;
+    public UnlockTally tally;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,6 +23,11 @@ public class DestroyEnemy : MonoBehaviour
 
             // Spawn the broken/shattered model at the new position
             GameObject brokenModel = Instantiate(Model, spawnPosition, transform.rotation);
+
+            if (tally)
+            {
+                tally.buttonsLeft -= 1;
+            }
 
             // Call ShatterModel to disable the original enemy and its components
             ShatterModel();
