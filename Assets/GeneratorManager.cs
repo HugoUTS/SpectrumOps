@@ -11,6 +11,8 @@ public class GeneratorManager : MonoBehaviour
     public Material destroyedMaterial;
     public MeshRenderer[] rend;
 
+    public GameObject connectedLaser;
+
     private void Start()
     {
         for (int i = 0; i < rend.Length; i++)
@@ -30,6 +32,7 @@ public class GeneratorManager : MonoBehaviour
                     rend[i].material = destroyedMaterial;
                 }
                 bossManager.levelAnim.SetInteger("PhaseInt", bossManager.levelAnim.GetInteger("PhaseInt") + 1);
+                connectedLaser.SetActive(false);
                 isDestroyed = true;
             }
         }

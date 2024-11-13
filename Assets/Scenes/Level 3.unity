@@ -9142,23 +9142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileRed
   waveManager: {fileID: 1942905174}
---- !u!114 &295979890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295979880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &296130374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 346750097642581542, guid: 0b230b854db12574e8b729cf1a24fca8,
@@ -9953,10 +9936,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1005398441}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1005398450}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &373948397
 GameObject:
@@ -21707,10 +21686,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 904387750}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 904387759}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &529510967
 GameObject:
@@ -24726,23 +24701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileBlue
   waveManager: {fileID: 1942905174}
---- !u!114 &715775084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715775074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &715908511
 GameObject:
   m_ObjectHideFlags: 0
@@ -31251,23 +31209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileRed
   waveManager: {fileID: 1942905174}
---- !u!114 &802051481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802051471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &806652455
 GameObject:
   m_ObjectHideFlags: 0
@@ -42082,23 +42023,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileGreen
   waveManager: {fileID: 1942905174}
---- !u!114 &904387759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904387749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &906980203
 GameObject:
   m_ObjectHideFlags: 0
@@ -48486,23 +48410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileRed
   waveManager: {fileID: 1942905174}
---- !u!114 &1005398450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005398440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &1011472186
 GameObject:
   m_ObjectHideFlags: 0
@@ -49380,10 +49287,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 295979881}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 295979890}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &1036914770
 GameObject:
@@ -50058,23 +49961,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileBlue
   waveManager: {fileID: 1942905174}
---- !u!114 &1114082678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114082668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &1129819657
 GameObject:
   m_ObjectHideFlags: 0
@@ -50776,10 +50662,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1689419953}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1689419962}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &1161614293
 GameObject:
@@ -52928,10 +52810,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 802051472}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 802051481}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &1328586234
 GameObject:
@@ -59718,10 +59596,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2052945309}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052945318}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &1431336807
 GameObject:
@@ -67538,23 +67412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileBlue
   waveManager: {fileID: 1942905174}
---- !u!114 &1689419962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689419952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &1712798045
 GameObject:
   m_ObjectHideFlags: 0
@@ -73308,23 +73165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileRed
   waveManager: {fileID: 1942905174}
---- !u!114 &1779389273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779389255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1 &1785732296
 GameObject:
   m_ObjectHideFlags: 0
@@ -96351,10 +96191,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1114082669}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1114082678}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &2000036288
 GameObject:
@@ -96835,10 +96671,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1779389264}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1779389273}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &2046841643
 GameObject:
@@ -97016,23 +96848,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: ProjectileYellow
   waveManager: {fileID: 1942905174}
---- !u!114 &2052945318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052945308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471863bae7207f4e872bc4a40a7c634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Projectile
-  destroyedWall: {fileID: 0}
-  destructionClip: {fileID: 0}
-  soundVolume: 1
-  tally: {fileID: 1942905173}
 --- !u!1001 &2055255862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97196,10 +97011,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 715775075}
-    - targetCorrespondingSourceObject: {fileID: 3587983732058493735, guid: b713d49703ce1604eaab6819887383a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 715775084}
   m_SourcePrefab: {fileID: 100100000, guid: b713d49703ce1604eaab6819887383a7, type: 3}
 --- !u!1 &2078314162
 GameObject:
@@ -108539,7 +108350,7 @@ PrefabInstance:
     - target: {fileID: 5575956766184829792, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -34.5
       objectReference: {fileID: 0}
     - target: {fileID: 5575956766184829792, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
@@ -108549,7 +108360,7 @@ PrefabInstance:
     - target: {fileID: 5575956766184829792, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 5575956766184829792, guid: 22cb0f9beb9a2a840999da9e895e5c55,
         type: 3}
