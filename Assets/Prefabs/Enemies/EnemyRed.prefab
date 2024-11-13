@@ -57,22 +57,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9848078
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.17364816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
@@ -97,7 +97,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
       propertyPath: m_Name
-      value: FrontGuardL
+      value: EnemyRed
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 1cd864ab6f3d79548bcab15816058696,
         type: 3}
@@ -228,6 +228,7 @@ MonoBehaviour:
     type: 3}
   destructionClip: {fileID: 8300000, guid: 6a26b602b44644b8aa07b5a6cd3a76a2, type: 3}
   soundVolume: 1
+  tally: {fileID: 0}
 --- !u!114 &3274658553480872149
 MonoBehaviour:
   m_ObjectHideFlags: 0
