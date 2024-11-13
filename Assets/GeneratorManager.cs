@@ -11,7 +11,7 @@ public class GeneratorManager : MonoBehaviour
     public Material destroyedMaterial;
     public MeshRenderer[] rend;
 
-    public GameObject connectedLaser;
+    public AudioSource explodeSound;
 
     private void Start()
     {
@@ -32,7 +32,7 @@ public class GeneratorManager : MonoBehaviour
                     rend[i].material = destroyedMaterial;
                 }
                 bossManager.levelAnim.SetInteger("PhaseInt", bossManager.levelAnim.GetInteger("PhaseInt") + 1);
-                connectedLaser.SetActive(false);
+                explodeSound.Play();
                 isDestroyed = true;
             }
         }

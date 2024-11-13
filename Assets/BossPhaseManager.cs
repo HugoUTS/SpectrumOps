@@ -11,7 +11,7 @@ public class BossPhaseManager : MonoBehaviour
     public GameObject[] wave3Objects;
     public GameObject[] wave4Objects;
 
-    public GameObject[] connectedLasers;
+    public AudioSource risingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -57,23 +57,8 @@ public class BossPhaseManager : MonoBehaviour
         }
     }
 
-    public void TurnOnLaserRed()
+    public void PlayRisingSound()
     {
-        connectedLasers[0].SetActive(true);
-    }
-
-    public void TurnOnLaserYellow()
-    {
-        connectedLasers[1].SetActive(true);
-    }
-
-    public void TurnOnLaserGreen()
-    {
-        connectedLasers[2].SetActive(true);
-    }
-
-    public void TurnOnLaserBlue()
-    {
-        connectedLasers[3].SetActive(true);
+        risingSound.Play();
     }
 }
